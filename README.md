@@ -1,4 +1,0 @@
-"# Pokemon" 
-"# Pokemon" 
-"# Pokemon" 
-"# Pokemon" 
