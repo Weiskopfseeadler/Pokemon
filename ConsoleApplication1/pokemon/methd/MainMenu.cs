@@ -25,8 +25,14 @@ namespace poke.methd
             Player.ChangeAttack(0, 3, "vines");
             Enemy.Team[0].Name = "Hans";
 
-            // System.out.println(teams.enemy.get(0));
-
+            Console.WriteLine("1 Items Einsetzen" +
+                              "\n2 Kampf gegen Trainer" +
+                              "\n3 Kampf gegen Einzelnes Pokemon");
+            switch (Convert.ToInt32(Console.ReadLine()))
+            {
+                case 1: ;break;
+                    
+            }
 
             StartBattel(BattleStart,Enemy,Player);
 
@@ -40,6 +46,7 @@ namespace poke.methd
             BattleStart.Enemy = Enemy;
             BattleStart.Player = Player;
             BattleStart.IsSingelPokemon = false;
+            BattleStart.BattelMenu();
         }
     }
 }

@@ -8,11 +8,11 @@ namespace pokemon.savs
     {
         public int ActivePokemon { get; set; }
         public List<Pokemon> Team { get; set; } = new List<Pokemon>();
-        
+
 
         public bool CheckIsAktivePokemonKO()
         {
-            bool checkIsAktivePokemonKO = Team[ActivePokemon].LivePoints > 0;
+            bool checkIsAktivePokemonKO = !(Team[ActivePokemon].LivePoints > 0);
 
             return checkIsAktivePokemonKO;
         }
@@ -33,8 +33,6 @@ namespace pokemon.savs
 
         public void ChangeAttack(int indexPokemon, int indexAttacke, string attackKey)
         {
-            
-            
             Team[indexPokemon].PokeAttackHash[indexAttacke] = Generate.AttackHash[attackKey];
         }
 
@@ -72,7 +70,7 @@ namespace pokemon.savs
         public void SetTeam()
         {
             this.ActivePokemon = 0;
-           
+
             Generate.GeneratAttack();
             Generate.GeneratPokemon();
             this.Team.Add(new Pokemon(Generate.PokemonHash["pikatchu"]));
@@ -81,7 +79,6 @@ namespace pokemon.savs
             this.Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
             this.Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
             this.Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
-          
         }
     }
 }

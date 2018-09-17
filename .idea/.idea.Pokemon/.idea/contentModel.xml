@@ -10,7 +10,6 @@
         <e p="Class1.cs" t="Include" />
         <e p="ConsoleApplication1.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
-        <e p="poke" t="Include" />
         <e p="Pokemon" t="Include">
           <e p="methd" t="Include">
             <e p="Battle.cs" t="Include" />
@@ -20,7 +19,7 @@
           <e p="model" t="Include">
             <e p="Attack.cs" t="Include" />
             <e p="Enum.cs" t="Include" />
-            <e p="Items.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
             <e p="package-info.cs" t="Include" />
             <e p="Pokemon.cs" t="Include" />
             <e p="Typ.cs" t="Include" />

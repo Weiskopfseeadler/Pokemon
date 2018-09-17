@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using ConsoleApplication1.poke.model;
+using ConsoleApplication1.pokemon.model;
 
 namespace pokemon.savs
 {
@@ -7,9 +9,11 @@ namespace pokemon.savs
 
     public class Generate
     {
-        private static Dictionary<string, Attack> _attackHash = new Dictionary<string, Attack>();
+        private static Dictionary<string, Attack> _dictionaryOfAttacks = new Dictionary<string, Attack>();
 
-        private static Dictionary<string, Pokemon> _pokemonHash = new Dictionary<string, Pokemon>();
+        private static Dictionary<string, Pokemon> _dictionaryOfPokemons = new Dictionary<string, Pokemon>();
+        
+        private static Dictionary<string,Item> _dictionaryOfItems = new Dictionary<string, Item>();
 
         //private Dictionary<string, Typ> _typsDictionary= new Dictionary<string, Typ>();
         /*
@@ -26,56 +30,63 @@ namespace pokemon.savs
 		}
 		*/
 
+        public static void GeneratItems()
+        {
+            _dictionaryOfItems.Add("SmallHealPotion",new Item("SmallHealPotion",FunktionOfItem.Heal,50,10));
+            _dictionaryOfItems.Add("SmallHeath");
+        }
+        
+
         public static void GeneratAttack()
         {
-            _attackHash[""] = new Attack("", "", 0);
-            _attackHash["vines"] = new Attack("Vines", "plants", 200);
-            _attackHash["scratch"] = new Attack("Scratch", "normal", 12);
-            _attackHash["thunder"] = new Attack("thunder", "electricity", 40);
-            _attackHash["glow"] = new Attack("Glow", "fire", 25);
-            _attackHash["spark"] = new Attack("Spark", "electricity", 10);
-            _attackHash["flamethrower"] = new Attack("Flamethrower", "fire", 50);
+            _dictionaryOfAttacks[""] = new Attack("", "", 0);
+            _dictionaryOfAttacks["vines"] = new Attack("Vines", "plants", 200);
+            _dictionaryOfAttacks["scratch"] = new Attack("Scratch", "normal", 12);
+            _dictionaryOfAttacks["thunder"] = new Attack("thunder", "electricity", 40);
+            _dictionaryOfAttacks["glow"] = new Attack("Glow", "fire", 25);
+            _dictionaryOfAttacks["spark"] = new Attack("Spark", "electricity", 10);
+            _dictionaryOfAttacks["flamethrower"] = new Attack("Flamethrower", "fire", 50);
         }
 
         public static void GeneratPokemon()
         {
             PokemonHash.Add("Psyduck", new Pokemon("Psyduck", "Psyduck", 10, 10, "water", "", 0, 0, 0,
-                _attackHash["scratch"], _attackHash["flamethrower"], _attackHash["flamethrower"],
-                _attackHash["flamethrower"]));
+                _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["flamethrower"], _dictionaryOfAttacks["flamethrower"],
+                _dictionaryOfAttacks["flamethrower"]));
 
             PokemonHash.Add("Squirtle",
-                new Pokemon("Squirtle", "Squirtle", 275, 275, "water", "", 5, 5, 30, _attackHash[""], _attackHash[""],
-                    _attackHash[""], _attackHash[""]));
+                new Pokemon("Squirtle", "Squirtle", 275, 275, "water", "", 5, 5, 30, _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
+                    _dictionaryOfAttacks[""], _dictionaryOfAttacks[""]));
 
             PokemonHash.Add("empty",
-                new Pokemon("", "", 0, 0, "", "", 0, 0, 0, _attackHash[""], _attackHash[""], _attackHash[""],
-                    _attackHash[""]));
+                new Pokemon("", "", 0, 0, "", "", 0, 0, 0, _dictionaryOfAttacks[""], _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
+                    _dictionaryOfAttacks[""]));
 
             PokemonHash["pikatchu"] = new Pokemon("Pikatchu", "pikatchu", 200, 200, "electricity", "", 20, 20, 5,
-                _attackHash["spark"], _attackHash["thunder"], _attackHash["scratch"], _attackHash["glow"]);
+                _dictionaryOfAttacks["spark"], _dictionaryOfAttacks["thunder"], _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["glow"]);
 
-            _pokemonHash.Add("charmander",
-                new Pokemon("Charmander", "charmander", 225, 225, "fire", "", 5, 20, 10, _attackHash["glow"],
-                    _attackHash["scratch"], _attackHash["flamethrower"], _attackHash["flamethrower"]));
+            _dictionaryOfPokemons.Add("charmander",
+                new Pokemon("Charmander", "charmander", 225, 225, "fire", "", 5, 20, 10, _dictionaryOfAttacks["glow"],
+                    _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["flamethrower"], _dictionaryOfAttacks["flamethrower"]));
 
-            _pokemonHash.Add("evoli", new Pokemon("evoli", "evoli", 150, 150, "normal", "", 20, 5, 10,
-                _attackHash["scratch"], _attackHash["flamethrower"], _attackHash["flamethrower"],
-                _attackHash["flamethrower"]));
+            _dictionaryOfPokemons.Add("evoli", new Pokemon("evoli", "evoli", 150, 150, "normal", "", 20, 5, 10,
+                _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["flamethrower"], _dictionaryOfAttacks["flamethrower"],
+                _dictionaryOfAttacks["flamethrower"]));
 
-            _pokemonHash.Add("Snivy",
+            _dictionaryOfPokemons.Add("Snivy",
                 new Pokemon("Snivy", "snivy", 150, 150, "plants", "sds", 30, 10, 10, null, null, null, null));
         }
 
         public static Dictionary<string, Attack> AttackHash
         {
-            get => _attackHash;
-            set => _attackHash = value;
+            get => _dictionaryOfAttacks;
+            set => _dictionaryOfAttacks = value;
         }
 
         public static Dictionary<string, Pokemon> PokemonHash
         {
-            get => _pokemonHash;
-            set => _pokemonHash = value;
+            get => _dictionaryOfPokemons;
+            set => _dictionaryOfPokemons = value;
         }
     }
 }

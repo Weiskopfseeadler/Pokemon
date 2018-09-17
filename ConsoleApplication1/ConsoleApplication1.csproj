@@ -44,7 +44,7 @@
     <Compile Include="pokemon\methd\package-info.cs" />
     <Compile Include="pokemon\model\Attack.cs" />
     <Compile Include="pokemon\model\Enum.cs" />
-    <Compile Include="pokemon\model\Items.cs" />
+    <Compile Include="pokemon\model\Item.cs" />
     <Compile Include="pokemon\model\package-info.cs" />
     <Compile Include="pokemon\model\Pokemon.cs" />
     <Compile Include="pokemon\model\Typ.cs" />
@@ -54,9 +54,6 @@
     <Compile Include="pokemon\savs\TeamInterface.cs" />
     <Compile Include="pokemon\savs\TeamPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="poke" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

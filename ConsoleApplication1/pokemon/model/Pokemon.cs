@@ -14,12 +14,8 @@ namespace poke.model
         private string _typ2;
         private int _initiative;
         private int _strength;
-
         private int _defence;
-
-        // private int spezstrength; Nicht Umsetzen
-        // private int spezdefence;  Nicht Umsetzen
-        private List<Attack> _pokeAttackHash = new List<Attack>();
+        private List<Attack> _pokeAttackList = new List<Attack>();
 
         public Pokemon()
         {
@@ -37,10 +33,10 @@ namespace poke.model
             this._initiative = _initiative;
             this._strength = _strength;
             this._defence = _defence;
-            this._pokeAttackHash.Add(a1);
-            this._pokeAttackHash.Add(a2);
-            this._pokeAttackHash.Add(a3);
-            this._pokeAttackHash.Add(a4);
+            this._pokeAttackList.Add(a1);
+            this._pokeAttackList.Add(a2);
+            this._pokeAttackList.Add(a3);
+            this._pokeAttackList.Add(a4);
         }
         public Pokemon(Pokemon PokemonFromList)
         {
@@ -53,18 +49,18 @@ namespace poke.model
             this._initiative = PokemonFromList._initiative;
             this._strength = PokemonFromList._strength;
             this._defence = PokemonFromList._defence;
-            this._pokeAttackHash.Add(new Attack(PokemonFromList._pokeAttackHash[0]));
-            this._pokeAttackHash.Add(new Attack(PokemonFromList._pokeAttackHash[1]));
-            this._pokeAttackHash.Add(new Attack(PokemonFromList._pokeAttackHash[2]));
-            this._pokeAttackHash.Add(new Attack(PokemonFromList._pokeAttackHash[3]));
+            this._pokeAttackList.Add(new Attack(PokemonFromList._pokeAttackList[0]));
+            this._pokeAttackList.Add(new Attack(PokemonFromList._pokeAttackList[1]));
+            this._pokeAttackList.Add(new Attack(PokemonFromList._pokeAttackList[2]));
+            this._pokeAttackList.Add(new Attack(PokemonFromList._pokeAttackList[3]));
         }
 
    
 
         public virtual string PokeAttacksToString()
         {
-            return "Attack 1: " + _pokeAttackHash[0] + " Attack 2: " + _pokeAttackHash[1] + "\nAttack 3: " +
-            _pokeAttackHash[2] + "Attack 4: " + _pokeAttackHash[3];
+            return "Attack 1: " + _pokeAttackList[0] + " Attack 2: " + _pokeAttackList[1] + "\nAttack 3: " +
+            _pokeAttackList[2] + "Attack 4: " + _pokeAttackList[3];
         }
 
         public override string ToString()
@@ -86,19 +82,19 @@ namespace poke.model
             get => _livePoints;
             set
             {
-                if (_livePoints+value > _maxLivePoints )
+                if ( value > _maxLivePoints )
                 {
                     _livePoints = _maxLivePoints;
-                    Console.WriteLine("overLive");
-                }else if (_livePoints+value<=0)
+                   
+                }else if (value<=0)
                 {
                     _livePoints = 0;
-                    Console.WriteLine("underLive");
+                  
                 }
                 else
                 {
                     _livePoints =  value;
-                    Console.WriteLine("normallive");
+                  
                 }
             }
         }
@@ -141,8 +137,8 @@ namespace poke.model
 
         public List<Attack> PokeAttackHash
         {
-            get => _pokeAttackHash;
-            set => _pokeAttackHash = value;
+            get => _pokeAttackList;
+            set => _pokeAttackList = value;
         }
 
 

@@ -5,16 +5,14 @@ using pokemon.savs;
 
 namespace poke.methd
 {
-    
-
     public class Battle
     {
-        private TeamEnemy _enemy;
-        private TeamPlayer _player;
+        private TeamEnemy _enemy = new TeamEnemy();
+        private TeamPlayer _player = new TeamPlayer();
         private bool _isBattelTime;
-        private bool _isSingelPokemon;
+        private static bool _isSingelPokemon;
 
-        public void Menu()
+        public void BattelMenu()
         {
             _isBattelTime = true;
             while (_isBattelTime)
@@ -24,39 +22,49 @@ namespace poke.methd
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
                     case 1:
-                        ChoseAttack();
+                        ChosenAttack = ChoseAttack();
                         break;
                     case 2:
+                        ;
+                        break;
                     default:
                         ;
                         break;
                 }
 
                 BattlePhase(ChosenAttack);
-
-                Console.WriteLine(_player.ToString());
-                if (_player.CheckIsAktivePokemonKO())
+                Console.WriteLine("Test Status of Player Pokemon");
+                Console.WriteLine(Player.Team.ToString());
+                if (Player.CheckIsAktivePokemonKO())
                 {
-                    if (_player.CheckAreAllPokemonKO())
+                    if (Player.CheckAreAllPokemonKO())
                     {
-                        _isBattelTime = false;
+                        IsBattelTime = false;
                     }
                     else
                     {
-                        _player.CangeAktivePokemon();
+                        Player.CangeAktivePokemon();
                     }
                 }
 
-                if (_enemy.CheckIsAktivePokemonKO())
+                Console.WriteLine("Test Status of Enemy Pokemon");
+                if (Enemy.CheckIsAktivePokemonKO())
                 {
-                    if (_player.CheckAreAllPokemonKO())
+                    Console.WriteLine("Active Pokemon is KO");
+                    if (Enemy.CheckAreAllPokemonKO())
                     {
-                        _isBattelTime = false;
+                        Console.WriteLine("All Pokemons are KO");
+                        IsBattelTime = false;
                     }
                     else
                     {
-                        _enemy.CangeAktivePokemon();
+                        Console.WriteLine("Pokemon must be changed");
+                        Enemy.CangeAktivePokemon();
                     }
+                }
+                else
+                {
+                    Console.WriteLine("Its All ok");
                 }
             }
         }
@@ -64,26 +72,31 @@ namespace poke.methd
 
         private void BattlePhase(int ChosenAttack)
         {
-
-            if (ChosenAttack != 0)
+            if (!(ChosenAttack == 0))
             {
                 ChosenAttack -= 1;
-                if (_player.Team[_player.ActivePokemon].Initiative >= Enemy.Team[Enemy.ActivePokemon].Initiative)
+                if (Player.Team[_player.ActivePokemon].Initiative >= Enemy.Team[Enemy.ActivePokemon].Initiative)
                 {
+                    Console.WriteLine("Player Turn");
                     turnPlayer(ChosenAttack);
                     if (!Enemy.CheckIsAktivePokemonKO())
                     {
+                        Console.WriteLine("Enemy Turn");
                         turnEnemy();
                     }
                 }
                 else
                 {
+                    Console.WriteLine("Enemy Turn");
                     turnEnemy();
                     if (!Player.CheckIsAktivePokemonKO())
                     {
+                        Console.WriteLine("Player Turn");
                         turnPlayer(ChosenAttack);
                     }
                 }
+            
+                
             }
             else
             {
@@ -95,15 +108,12 @@ namespace poke.methd
         private int ChoseAttack()
         {
             int index = 0;
-
-
             Console.WriteLine("player turn");
             Console.WriteLine(Player.Team[Player.ActivePokemon].PokeAttacksToString());
 
             for (bool IndexCorrect = false; IndexCorrect == false;)
             {
                 Console.Write("Enter Integer 1-4:");
-                Console.WriteLine("");
 
                 index = Convert.ToInt32(Console.ReadLine());
 
@@ -111,7 +121,6 @@ namespace poke.methd
                 {
                     IndexCorrect = true;
                 }
-               
             }
 
             return index;
@@ -120,60 +129,66 @@ namespace poke.methd
 
         private void turnPlayer(int ChosenAttack)
         {
-            Console.WriteLine(Player.Team[Player.ActivePokemon].PokeAttackHash[ChosenAttack]);
+            Console.WriteLine("______Player_________");
 
             DamageCalculation(
                 Player.Team[Player.ActivePokemon],
                 Player.Team[Player.ActivePokemon].PokeAttackHash[ChosenAttack],
                 Enemy.Team[Enemy.ActivePokemon]
             );
-            Console.WriteLine(Player.Team[Player.ActivePokemon]);
-
-
-            Console.WriteLine(Enemy.Team[Enemy.ActivePokemon].LivePoints);
-
-            Console.WriteLine("_______________");
+            Console.WriteLine("______PlayerTurnEnd_________");
         }
 
 
         private void turnEnemy()
         {
-            Console.WriteLine("enamy turn");
+            Console.WriteLine("______Enemy_________");
             Random random = new Random();
-            int randomNumber = random.Next(0, 3);
+            int RandomNumber = random.Next(0, 3);
 
-            Console.WriteLine(randomNumber);
-            Console.WriteLine(Enemy.Team[Enemy.ActivePokemon].PokeAttackHash[randomNumber]);
+            Console.WriteLine("Randomnumber" + RandomNumber);
+            //Console.WriteLine(Enemy.Team[Enemy.ActivePokemon].PokeAttackHash[RandomNumber].ToString());
 
             DamageCalculation(
                 Enemy.Team[Enemy.ActivePokemon],
-                Enemy.Team[Enemy.ActivePokemon].PokeAttackHash[randomNumber],
+                Enemy.Team[Enemy.ActivePokemon].PokeAttackHash[RandomNumber],
                 Player.Team[Player.ActivePokemon]
             );
-            Console.WriteLine(Player.Team[Player.ActivePokemon].LivePoints);
+            Console.WriteLine("______EnemyTurnEnd_________");
         }
 
 
-        private void DamageCalculation(Pokemon attacking, Attack attack, Pokemon defending)
+        private void DamageCalculation(Pokemon Attacking, Attack Attack, Pokemon Defending)
         {
+            Console.WriteLine("________StartCalculation_______");
             double BonusDamage;
-            int takenDamage = attack.Damage;
-            BonusDamage = takenDamage * ((double) attacking.Strength / 100);
-            takenDamage = (int) Math.Round(+BonusDamage);
-            BonusDamage = takenDamage * ((double) defending.Defence / 100);
-            takenDamage = (int) Math.Round(-BonusDamage);
-            if (defending.LivePoints - takenDamage < 1)
+            double DamageAbsorb;
+            int TakenDamage = Attack.Damage;
+            BonusDamage = TakenDamage * ((double) Attacking.Strength / 100);
+            TakenDamage += (int) Math.Round(+BonusDamage);
+            DamageAbsorb = TakenDamage * ((double) Defending.Defence / 100);
+            TakenDamage -= (int) Math.Round(DamageAbsorb);
+            if (Defending.LivePoints - TakenDamage < 0)
             {
-                defending.LivePoints = 0;
+                Defending.LivePoints = 0;
+
+                Console.WriteLine("DamageAttak" + Attack.Damage);
+                Console.WriteLine("Bonusdamage" + BonusDamage);
+                Console.WriteLine("Absorbet Damage" + DamageAbsorb);
+                Console.WriteLine("TakenDamage" + TakenDamage);
+                Console.WriteLine("Livpoints" + Defending.LivePoints);
             }
             else
             {
-                Console.WriteLine(BonusDamage);
-                Console.WriteLine(attack.Damage);
-                defending.LivePoints = -(takenDamage);
+                Defending.LivePoints -= TakenDamage;
+                Console.WriteLine("DamageAttak" + Attack.Damage);
+                Console.WriteLine("Bonusdamage" + BonusDamage);
+                Console.WriteLine("Absorbet Damage" + DamageAbsorb);
+                Console.WriteLine("TakenDamage" + TakenDamage);
+                Console.WriteLine("Livpoints" + Defending.LivePoints);
             }
 
-            Console.WriteLine(defending.LivePoints);
+            Console.WriteLine("________CalculationEnd____________");
         }
 
         public TeamEnemy Enemy
