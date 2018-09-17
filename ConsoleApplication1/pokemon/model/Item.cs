@@ -1,5 +1,8 @@
+using System;
+using System.Linq;
 using ConsoleApplication1.pokemon.model;
 using poke.model;
+using pokemon.savs;
 
 namespace ConsoleApplication1.poke.model
 {
@@ -18,14 +21,14 @@ namespace ConsoleApplication1.poke.model
             _valueOfItem = valueOfItem;
         }
 
-        public void activateEffectOfItem(Item UsedItem, Pokemon Pokemon)
+        public void activateEffectOfItem( Pokemon Pokemon)
         {
-            if (UsedItem.ValueOfItem > 0)
+            if (this.ValueOfItem > 0)
             {
-                switch (UsedItem.FunktionOfItem)
+                switch (this.FunktionOfItem)
                 {
                     case FunktionOfItem.Heal:
-                        Pokemon.LivePoints += UsedItem.ValueOfEffekt;
+                        Pokemon.LivePoints += this.ValueOfEffekt;
                         break;
                     case FunktionOfItem.MoreDefense:
                         Pokemon.Defence += ValueOfEffekt;
@@ -37,14 +40,16 @@ namespace ConsoleApplication1.poke.model
                         ;
                         break;
                     case FunktionOfItem.MoreHealth:
-                        Pokemon.MaxLivePoints += UsedItem.ValueOfEffekt;
+                        Pokemon.MaxLivePoints += this.ValueOfEffekt;
+                        Pokemon.LivePoints += this.ValueOfEffekt;
                         break;
                 }
             }
 
-            UsedItem.ValueOfEffekt -= 1;
+            this.ValueOfEffekt -= 1;
         }
 
+       
         public string Name
         {
             get => _name;

@@ -33,7 +33,8 @@ namespace pokemon.savs
         public static void GeneratItems()
         {
             _dictionaryOfItems.Add("SmallHealPotion",new Item("SmallHealPotion",FunktionOfItem.Heal,50,10));
-            _dictionaryOfItems.Add("SmallHeath");
+            _dictionaryOfItems.Add("SmallHeath",new  Item("SmallHeath",FunktionOfItem.MoreHealth,50,101
+            ));
         }
         
 
@@ -50,19 +51,19 @@ namespace pokemon.savs
 
         public static void GeneratPokemon()
         {
-            PokemonHash.Add("Psyduck", new Pokemon("Psyduck", "Psyduck", 10, 10, "water", "", 0, 0, 0,
+            DictionaryOfPokemons.Add("Psyduck", new Pokemon("Psyduck", "Psyduck", 10, 10, "water", "", 0, 0, 0,
                 _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["flamethrower"], _dictionaryOfAttacks["flamethrower"],
                 _dictionaryOfAttacks["flamethrower"]));
 
-            PokemonHash.Add("Squirtle",
+            DictionaryOfPokemons.Add("Squirtle",
                 new Pokemon("Squirtle", "Squirtle", 275, 275, "water", "", 5, 5, 30, _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
                     _dictionaryOfAttacks[""], _dictionaryOfAttacks[""]));
 
-            PokemonHash.Add("empty",
+            DictionaryOfPokemons.Add("empty",
                 new Pokemon("", "", 0, 0, "", "", 0, 0, 0, _dictionaryOfAttacks[""], _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
                     _dictionaryOfAttacks[""]));
 
-            PokemonHash["pikatchu"] = new Pokemon("Pikatchu", "pikatchu", 200, 200, "electricity", "", 20, 20, 5,
+            DictionaryOfPokemons["pikatchu"] = new Pokemon("Pikatchu", "pikatchu", 200, 200, "electricity", "", 20, 20, 5,
                 _dictionaryOfAttacks["spark"], _dictionaryOfAttacks["thunder"], _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["glow"]);
 
             _dictionaryOfPokemons.Add("charmander",
@@ -77,16 +78,22 @@ namespace pokemon.savs
                 new Pokemon("Snivy", "snivy", 150, 150, "plants", "sds", 30, 10, 10, null, null, null, null));
         }
 
-        public static Dictionary<string, Attack> AttackHash
+        public static Dictionary<string, Attack> DictionaryOfAttacks
         {
             get => _dictionaryOfAttacks;
             set => _dictionaryOfAttacks = value;
         }
 
-        public static Dictionary<string, Pokemon> PokemonHash
+        public static Dictionary<string, Pokemon> DictionaryOfPokemons
         {
             get => _dictionaryOfPokemons;
             set => _dictionaryOfPokemons = value;
+        }
+
+        public static Dictionary<string, Item> DictionaryOfItems
+        {
+            get => _dictionaryOfItems;
+            set => _dictionaryOfItems = value;
         }
     }
 }

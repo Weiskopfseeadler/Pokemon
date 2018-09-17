@@ -5,7 +5,6 @@ namespace poke.model
 {
     public class Pokemon
     {
-      
         private string _name;
         private string _pokemonArt;
         private int _livePoints;
@@ -21,7 +20,8 @@ namespace poke.model
         {
         }
 
-        public Pokemon(string _name, string _pokemonArt, int _livePoints,int _maxLivePoints ,string _typ1, string _typ2, int _initiative,
+        public Pokemon(string _name, string _pokemonArt, int _livePoints, int _maxLivePoints, string _typ1,
+            string _typ2, int _initiative,
             int _strength, int _defence, Attack a1, Attack a2, Attack a3, Attack a4) : base()
         {
             this._name = _name;
@@ -38,6 +38,7 @@ namespace poke.model
             this._pokeAttackList.Add(a3);
             this._pokeAttackList.Add(a4);
         }
+
         public Pokemon(Pokemon PokemonFromList)
         {
             this._name = PokemonFromList._name;
@@ -55,19 +56,28 @@ namespace poke.model
             this._pokeAttackList.Add(new Attack(PokemonFromList._pokeAttackList[3]));
         }
 
-   
 
         public virtual string PokeAttacksToString()
         {
             return "Attack 1: " + _pokeAttackList[0] + " Attack 2: " + _pokeAttackList[1] + "\nAttack 3: " +
-            _pokeAttackList[2] + "Attack 4: " + _pokeAttackList[3];
+                   _pokeAttackList[2] + "Attack 4: " + _pokeAttackList[3];
         }
 
         public override string ToString()
         {
-            return "name: " + _name + " PokemonArt: " + _pokemonArt + " LivePoints: " + _livePoints +" maxLivePoints: " + _maxLivePoints + " Typ1" + _typ1 +
-                   " Typ2: " + _typ2 + " initiative: " + _initiative + " strength: " + _strength + " defence: " + _defence +
+            return "name: " + _name + " PokemonArt: " + _pokemonArt + " LivePoints: " + _livePoints +
+                   " maxLivePoints: " + _maxLivePoints + " Typ1" + _typ1 +
+                   " Typ2: " + _typ2 + " initiative: " + _initiative + " strength: " + _strength + " defence: " +
+                   _defence +
                    "\n" + PokeAttacksToString();
+        }
+
+        public string ToStringWithOutAttacks()
+        {
+            return "name: " + _name + " PokemonArt: " + _pokemonArt + " LivePoints: " + _livePoints +
+                   " maxLivePoints: " + _maxLivePoints + " Typ1" + _typ1 +
+                   " Typ2: " + _typ2 + " initiative: " + _initiative + " strength: " + _strength + " defence: " +
+                   _defence;
         }
 
 
@@ -82,19 +92,17 @@ namespace poke.model
             get => _livePoints;
             set
             {
-                if ( value > _maxLivePoints )
+                if (value > _maxLivePoints)
                 {
                     _livePoints = _maxLivePoints;
-                   
-                }else if (value<=0)
+                }
+                else if (value <= 0)
                 {
                     _livePoints = 0;
-                  
                 }
                 else
                 {
-                    _livePoints =  value;
-                  
+                    _livePoints = value;
                 }
             }
         }
@@ -108,13 +116,11 @@ namespace poke.model
         public string Typ1
         {
             get => _typ1;
-           
         }
 
         public string Typ2
         {
             get => _typ2;
-        
         }
 
         public int Initiative
@@ -140,8 +146,5 @@ namespace poke.model
             get => _pokeAttackList;
             set => _pokeAttackList = value;
         }
-
-
-
     }
 }

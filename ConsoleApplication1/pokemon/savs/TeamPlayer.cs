@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using ConsoleApplication1.poke.model;
 using poke.model;
 
 namespace pokemon.savs
@@ -8,6 +10,7 @@ namespace pokemon.savs
     {
         public int ActivePokemon { get; set; }
         public List<Pokemon> Team { get; set; } = new List<Pokemon>();
+        public Dictionary<string ,Item> Items{ get; set; }= new Dictionary<string, Item>();
 
 
         public bool CheckIsAktivePokemonKO()
@@ -30,10 +33,29 @@ namespace pokemon.savs
 
             return death;
         }
+        public void ChoseItem()
+        {
+            Console.WriteLine("Item");
+            for (int i = 0; i < this.Items.Count; i++)
+            {
+                Console.WriteLine(this.Items.ElementAt(i).Value.Name);
+            }
+
+            string ChosenItem = Console.ReadLine();
+
+            for (int i = 0; i < this.Team.Count; i++)
+            {
+                Console.WriteLine(i + " " + this.Team[i].ToStringWithOutAttacks());
+            }
+
+            int ChosenPokemon = Convert.ToInt32(Console.ReadLine());
+            this.Items[ChosenItem].activateEffectOfItem(this.Team[ChosenPokemon]);
+            Console.WriteLine(this.Team[ChosenPokemon]);
+        }
 
         public void ChangeAttack(int indexPokemon, int indexAttacke, string attackKey)
         {
-            Team[indexPokemon].PokeAttackHash[indexAttacke] = Generate.AttackHash[attackKey];
+            Team[indexPokemon].PokeAttackHash[indexAttacke] = Generate.DictionaryOfAttacks[attackKey];
         }
 
         public void CangeAktivePokemon()
@@ -52,7 +74,7 @@ namespace pokemon.savs
                 {
                     if (Team[y].LivePoints > 0)
                     {
-                        Console.WriteLine("Nummer " + (y + 1) + "   " + Team[y].ToString());
+                        Console.WriteLine("Nummer " + (y + 1) + "   " + Team[y].ToStringWithOutAttacks());
                     }
                 }
 
@@ -70,15 +92,14 @@ namespace pokemon.savs
         public void SetTeam()
         {
             this.ActivePokemon = 0;
+            Items = Generate.DictionaryOfItems;
 
-            Generate.GeneratAttack();
-            Generate.GeneratPokemon();
-            this.Team.Add(new Pokemon(Generate.PokemonHash["pikatchu"]));
-            this.Team.Add(new Pokemon(Generate.PokemonHash["evoli"]));
-            this.Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
-            this.Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
-            this.Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
-            this.Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
+            this.Team.Add(new Pokemon(Generate.DictionaryOfPokemons["pikatchu"]));
+            this.Team.Add(new Pokemon(Generate.DictionaryOfPokemons["evoli"]));
+            this.Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            this.Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            this.Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            this.Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
         }
     }
 }

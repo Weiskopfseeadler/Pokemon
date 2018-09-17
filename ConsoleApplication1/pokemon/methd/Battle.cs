@@ -1,5 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
+using System.Linq;
+using ConsoleApplication1.poke.model;
 using poke.model;
 using pokemon.savs;
 
@@ -9,6 +11,7 @@ namespace poke.methd
     {
         private TeamEnemy _enemy = new TeamEnemy();
         private TeamPlayer _player = new TeamPlayer();
+
         private bool _isBattelTime;
         private static bool _isSingelPokemon;
 
@@ -25,16 +28,16 @@ namespace poke.methd
                         ChosenAttack = ChoseAttack();
                         break;
                     case 2:
-                        ;
+                        Player.CangeAktivePokemon();
                         break;
-                    default:
-                        ;
+                    case 3:
+                        Player.ChoseItem();
                         break;
                 }
 
                 BattlePhase(ChosenAttack);
                 Console.WriteLine("Test Status of Player Pokemon");
-                Console.WriteLine(Player.Team.ToString());
+                
                 if (Player.CheckIsAktivePokemonKO())
                 {
                     if (Player.CheckAreAllPokemonKO())
@@ -95,8 +98,6 @@ namespace poke.methd
                         turnPlayer(ChosenAttack);
                     }
                 }
-            
-                
             }
             else
             {

@@ -39,7 +39,7 @@ namespace pokemon.savs
 
         public void CangeAktivePokemon()
         {
-            Console.WriteLine("enemy turn");
+            Console.WriteLine("enemy ChangescPokemon");
             bool pokemonNotChosen = true;
             while (pokemonNotChosen)
             {
@@ -58,20 +58,24 @@ namespace pokemon.savs
         {
             this.ActivePokemon = 0;
 
-            Team.Add(new Pokemon(Generate.PokemonHash["charmander"]));
-            Team.Add(new Pokemon(Generate.PokemonHash["evoli"]));
-            Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
-            Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
-            Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
-            Team.Add(new Pokemon(Generate.PokemonHash["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["charmander"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["evoli"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
         }
 
-        public void RandomEnemy()
-        { 
-            
-            for (int i = Random.Next(0, 5); i < 6; i++)
+        public void RandomEnemy(bool IsSingelPokemon)
+        {
+            int RadomNumber=Random.Next(0, 5);
+            if (IsSingelPokemon)
             {
-                Team[i]=Generate.PokemonHash.ElementAt(Random.Next(0, Generate.AttackHash.Count)).Value;
+                int RadomNumber=0;   
+            }
+            for (int i = 0; i <= RadomNumber; i++)
+            {
+                Team[i]=Generate.DictionaryOfPokemons.ElementAt(Random.Next(0, Generate.DictionaryOfAttacks.Count)).Value;
                 Console.WriteLine(Team[i].ToString());
             }
             
