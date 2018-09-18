@@ -12,7 +12,7 @@ namespace poke.methd
             // TODO Auto-generated method stub
 
 
-            TeamPlayer Player = new TeamPlayer();
+            Bag Bag = new Bag();
             TeamEnemy Enemy = new TeamEnemy();
 
 
@@ -20,12 +20,12 @@ namespace poke.methd
             Generate.GeneratPokemon();
             Generate.GeneratItems();
 
-            Player.SetTeam();
-            Enemy.SetTeam();
+            Bag.SetBag();
+            Enemy.SetBag();
 
 
-            Player.Team[0].Name = "Fritz";
-            Player.ChangeAttack(0, 3, "vines");
+            Bag.Team[0].Name = "Fritz";
+            Bag.ChangeAttack(0, 3, "vines");
             Enemy.Team[0].Name = "Hans";
             bool IsPlaying = true;
             while (IsPlaying)
@@ -33,20 +33,22 @@ namespace poke.methd
                 Console.WriteLine("1 Items Einsetzen" +
                                   "\n2 Kampf gegen Trainer" +
                                   "\n3 Kampf gegen Einzelnes Pokemon" +
+                                  "\n4 Shop" +
                                   "\n9 Quit");
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
                     case 1:
 
-                        Player.ChoseItem()
+                        Bag.ChoseItem()
                             ;
                         break;
                     case 2:
                         Enemy.RandomEnemy(false);
-                        StartBattel(Enemy, Player, false);
+                        StartBattel(Enemy, Bag, false);
                         break;
                     case 3:
                         Enemy.RandomEnemy(true);
+                        StartBattel(Enemy, Bag, true);
                         break;
                     case 9:
                         IsPlaying = false;
@@ -56,15 +58,15 @@ namespace poke.methd
 
 
             Console.WriteLine("battel over");
-            Console.WriteLine(Player.ToString());
+            Console.WriteLine(Bag.ToString());
         }
 
 
-        private static void StartBattel(TeamEnemy Enemy, TeamPlayer Player, bool IsSingelPokemon)
+        private static void StartBattel(TeamEnemy Enemy, Bag Bag, bool IsSingelPokemon)
         {
             Battle BattleStart = new Battle();
             BattleStart.Enemy = Enemy;
-            BattleStart.Player = Player;
+            BattleStart.Bag = Bag;
             BattleStart.IsSingelPokemon = IsSingelPokemon;
             BattleStart.BattelMenu();
         }

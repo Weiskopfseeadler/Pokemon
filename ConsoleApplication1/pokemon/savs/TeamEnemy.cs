@@ -7,13 +7,13 @@ namespace pokemon.savs
 {
     public class TeamEnemy : TeamInterface
     {
-        public int ActivePokemon { get; set; }
-        public List<Pokemon> Team { get; set; } = new List<Pokemon>();
+        private int _activePokemon;
+        private List<Pokemon> _team = new List<Pokemon>();
         public Random Random = new Random();
-        
+
         public bool CheckIsAktivePokemonKO()
         {
-            bool checkIsAktivePokemonKO = !(Team[ActivePokemon].LivePoints > 0);
+            bool checkIsAktivePokemonKO = !(_team[_activePokemon].LivePoints > 0);
 
             return checkIsAktivePokemonKO;
         }
@@ -23,7 +23,7 @@ namespace pokemon.savs
             bool death = true;
             for (int i = 0; i < 6; i++)
             {
-                if (Team[i].LivePoints != 0)
+                if (_team[i].LivePoints != 0)
                 {
                     death = false;
                 }
@@ -43,43 +43,58 @@ namespace pokemon.savs
             bool pokemonNotChosen = true;
             while (pokemonNotChosen)
             {
-                
                 int randomNumber = Random.Next(0, 5);
 
-                if (Team[randomNumber].LivePoints == 0)
+                if (_team[randomNumber].LivePoints != 0)
                 {
                     pokemonNotChosen = false;
-                    ActivePokemon = randomNumber;
+                    _activePokemon = randomNumber;
                 }
             }
         }
 
-        public void SetTeam()
+        public void SetBag()
         {
-            this.ActivePokemon = 0;
+            this._activePokemon = 0;
 
-            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["charmander"]));
-            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["evoli"]));
-            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["charmander"]));
+            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["evoli"]));
+            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
         }
 
         public void RandomEnemy(bool IsSingelPokemon)
         {
-            int RadomNumber=Random.Next(0, 5);
+            int RadomNumber = Random.Next(0, 5);
             if (IsSingelPokemon)
             {
-                int RadomNumber=0;   
+                RadomNumber = 0;
             }
+            else
+            {
+                RadomNumber = 0;
+            }
+
             for (int i = 0; i <= RadomNumber; i++)
             {
-                Team[i]=Generate.DictionaryOfPokemons.ElementAt(Random.Next(0, Generate.DictionaryOfAttacks.Count)).Value;
-                Console.WriteLine(Team[i].ToString());
+                _team[i] = Generate.DictionaryOfPokemons.ElementAt(Random.Next(0, Generate.DictionaryOfAttacks.Count))
+                    .Value;
+                Console.WriteLine(_team[i].ToString());
             }
-            
-             
+        }
+
+        public int ActivePokemon
+        {
+            get => _activePokemon;
+            set => _activePokemon = value;
+        }
+
+        public List<Pokemon> Team
+        {
+            get => _team;
+            set => _team = value;
         }
     }
 }

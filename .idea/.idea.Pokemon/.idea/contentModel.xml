@@ -10,7 +10,12 @@
         <e p="Class1.cs" t="Include" />
         <e p="ConsoleApplication1.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Pokemon" t="Include">
+          <e p="Interfaces" t="Include">
+            <e p="ItemInterFace.cs" t="Include" />
+            <e p="TeamInterface.cs" t="Include" />
+          </e>
           <e p="methd" t="Include">
             <e p="Battle.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
@@ -25,11 +30,10 @@
             <e p="Typ.cs" t="Include" />
           </e>
           <e p="savs" t="Include">
+            <e p="Bag.cs" t="Include" />
             <e p="Generate.cs" t="Include" />
             <e p="package-info.cs" t="Include" />
             <e p="TeamEnemy.cs" t="Include" />
-            <e p="TeamInterface.cs" t="Include" />
-            <e p="TeamPlayer.cs" t="Include" />
           </e>
         </e>
         <e p="Properties" t="Include">

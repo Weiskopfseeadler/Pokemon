@@ -60,7 +60,7 @@ namespace pokemon.savs
                     _dictionaryOfAttacks[""], _dictionaryOfAttacks[""]));
 
             DictionaryOfPokemons.Add("empty",
-                new Pokemon("", "", 0, 0, "", "", 0, 0, 0, _dictionaryOfAttacks[""], _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
+                new Pokemon("", "", 0, 0, "", "", 0, 0, 0,_dictionaryOfAttacks["vines"], _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
                     _dictionaryOfAttacks[""]));
 
             DictionaryOfPokemons["pikatchu"] = new Pokemon("Pikatchu", "pikatchu", 200, 200, "electricity", "", 20, 20, 5,
@@ -75,7 +75,7 @@ namespace pokemon.savs
                 _dictionaryOfAttacks["flamethrower"]));
 
             _dictionaryOfPokemons.Add("Snivy",
-                new Pokemon("Snivy", "snivy", 150, 150, "plants", "sds", 30, 10, 10, null, null, null, null));
+                new Pokemon("Snivy", "snivy", 150, 150, "plants", "sds", 30, 10, 10, _dictionaryOfAttacks[""] = new Attack("", "", 0), _dictionaryOfAttacks[""] = new Attack("", "", 0), _dictionaryOfAttacks[""] = new Attack("", "", 0), _dictionaryOfAttacks[""] = new Attack("", "", 0)));
         }
 
         public static Dictionary<string, Attack> DictionaryOfAttacks

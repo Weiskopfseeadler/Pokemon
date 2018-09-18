@@ -1,13 +1,11 @@
-using System;
-using System.Linq;
 using ConsoleApplication1.pokemon.model;
 using poke.model;
-using pokemon.savs;
 
 namespace ConsoleApplication1.poke.model
 {
-    public class Item
+    public class Item:ItemInterFace
     {
+
         private string _name;
         private FunktionOfItem _funktionOfItem;
         private int _valueOfEffekt;
@@ -21,17 +19,16 @@ namespace ConsoleApplication1.poke.model
             _valueOfItem = valueOfItem;
         }
 
-        public void activateEffectOfItem( Pokemon Pokemon)
+        public void ActivateEffectOfItem(Pokemon Pokemon)
         {
-            if (this.ValueOfItem > 0)
-            {
-                switch (this.FunktionOfItem)
+            if (_valueOfItem > 0)
+                switch (_funktionOfItem)
                 {
                     case FunktionOfItem.Heal:
-                        Pokemon.LivePoints += this.ValueOfEffekt;
+                        Pokemon.LivePoints += _valueOfEffekt;
                         break;
                     case FunktionOfItem.MoreDefense:
-                        Pokemon.Defence += ValueOfEffekt;
+                        Pokemon.Defence += _valueOfEffekt;
                         break;
                     case FunktionOfItem.MoreInitiative:
                         ;
@@ -40,16 +37,18 @@ namespace ConsoleApplication1.poke.model
                         ;
                         break;
                     case FunktionOfItem.MoreHealth:
-                        Pokemon.MaxLivePoints += this.ValueOfEffekt;
-                        Pokemon.LivePoints += this.ValueOfEffekt;
+                        Pokemon.MaxLivePoints += _valueOfEffekt;
+                        Pokemon.LivePoints += _valueOfEffekt;
+                        break;
+                    case FunktionOfItem.Pokeball:
+                        ;
                         break;
                 }
-            }
+            
 
-            this.ValueOfEffekt -= 1;
+            _valueOfEffekt -= 1;
         }
 
-       
         public string Name
         {
             get => _name;
@@ -65,7 +64,6 @@ namespace ConsoleApplication1.poke.model
         public int ValueOfEffekt
         {
             get => _valueOfEffekt;
-            set => _valueOfEffekt = value;
         }
 
         public int ValueOfItem

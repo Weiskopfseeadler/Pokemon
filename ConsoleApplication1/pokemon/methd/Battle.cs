@@ -10,7 +10,7 @@ namespace poke.methd
     public class Battle
     {
         private TeamEnemy _enemy = new TeamEnemy();
-        private TeamPlayer _player = new TeamPlayer();
+        private Bag _bag = new Bag();
 
         private bool _isBattelTime;
         private static bool _isSingelPokemon;
@@ -28,47 +28,58 @@ namespace poke.methd
                         ChosenAttack = ChoseAttack();
                         break;
                     case 2:
-                        Player.CangeAktivePokemon();
+                        Bag.CangeAktivePokemon();
                         break;
                     case 3:
-                        Player.ChoseItem();
+                        Bag.ChoseItem();
                         break;
                 }
 
                 BattlePhase(ChosenAttack);
-                Console.WriteLine("Test Status of Player Pokemon");
-                
-                if (Player.CheckIsAktivePokemonKO())
-                {
-                    if (Player.CheckAreAllPokemonKO())
-                    {
-                        IsBattelTime = false;
-                    }
-                    else
-                    {
-                        Player.CangeAktivePokemon();
-                    }
-                }
+                CheckStatus();
+            }
+            Random rand = new Random();
+           // int minGewin =;
+            
+        }
 
-                Console.WriteLine("Test Status of Enemy Pokemon");
-                if (Enemy.CheckIsAktivePokemonKO())
+        private void CheckStatus()
+        {
+            Console.WriteLine("Test Status of Bag Pokemon");
+
+            if (Bag.CheckIsAktivePokemonKO())
+            {
+                Console.WriteLine("Active Pokemon is KO");
+                if (Bag.CheckAreAllPokemonKO())
                 {
-                    Console.WriteLine("Active Pokemon is KO");
-                    if (Enemy.CheckAreAllPokemonKO())
-                    {
-                        Console.WriteLine("All Pokemons are KO");
-                        IsBattelTime = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Pokemon must be changed");
-                        Enemy.CangeAktivePokemon();
-                    }
+                    Console.WriteLine("All Pokemons are KO");
+
+                    IsBattelTime = false;
                 }
                 else
                 {
-                    Console.WriteLine("Its All ok");
+                    Bag.CangeAktivePokemon();
                 }
+            }
+
+            Console.WriteLine("Test Status of Enemy Pokemon");
+            if (Enemy.CheckIsAktivePokemonKO())
+            {
+                Console.WriteLine("Active Pokemon is KO");
+                if (Enemy.CheckAreAllPokemonKO())
+                {
+                    Console.WriteLine("All Pokemons are KO");
+                    IsBattelTime = false;
+                }
+                else
+                {
+                    Console.WriteLine("Pokemon must be changed");
+                    Enemy.CangeAktivePokemon();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Its All ok");
             }
         }
 
@@ -78,9 +89,9 @@ namespace poke.methd
             if (!(ChosenAttack == 0))
             {
                 ChosenAttack -= 1;
-                if (Player.Team[_player.ActivePokemon].Initiative >= Enemy.Team[Enemy.ActivePokemon].Initiative)
+                if (Bag.Team[_bag.ActivePokemon].Initiative >= Enemy.Team[Enemy.ActivePokemon].Initiative)
                 {
-                    Console.WriteLine("Player Turn");
+                    Console.WriteLine("Bag Turn");
                     turnPlayer(ChosenAttack);
                     if (!Enemy.CheckIsAktivePokemonKO())
                     {
@@ -92,9 +103,9 @@ namespace poke.methd
                 {
                     Console.WriteLine("Enemy Turn");
                     turnEnemy();
-                    if (!Player.CheckIsAktivePokemonKO())
+                    if (!Bag.CheckIsAktivePokemonKO())
                     {
-                        Console.WriteLine("Player Turn");
+                        Console.WriteLine("Bag Turn");
                         turnPlayer(ChosenAttack);
                     }
                 }
@@ -110,7 +121,7 @@ namespace poke.methd
         {
             int index = 0;
             Console.WriteLine("player turn");
-            Console.WriteLine(Player.Team[Player.ActivePokemon].PokeAttacksToString());
+            Console.WriteLine(Bag.Team[Bag.ActivePokemon].PokeAttacksToString());
 
             for (bool IndexCorrect = false; IndexCorrect == false;)
             {
@@ -133,8 +144,8 @@ namespace poke.methd
             Console.WriteLine("______Player_________");
 
             DamageCalculation(
-                Player.Team[Player.ActivePokemon],
-                Player.Team[Player.ActivePokemon].PokeAttackHash[ChosenAttack],
+                Bag.Team[Bag.ActivePokemon],
+                Bag.Team[Bag.ActivePokemon].PokeAttackHash[ChosenAttack],
                 Enemy.Team[Enemy.ActivePokemon]
             );
             Console.WriteLine("______PlayerTurnEnd_________");
@@ -153,7 +164,7 @@ namespace poke.methd
             DamageCalculation(
                 Enemy.Team[Enemy.ActivePokemon],
                 Enemy.Team[Enemy.ActivePokemon].PokeAttackHash[RandomNumber],
-                Player.Team[Player.ActivePokemon]
+                Bag.Team[Bag.ActivePokemon]
             );
             Console.WriteLine("______EnemyTurnEnd_________");
         }
@@ -165,6 +176,7 @@ namespace poke.methd
             double BonusDamage;
             double DamageAbsorb;
             int TakenDamage = Attack.Damage;
+                
             BonusDamage = TakenDamage * ((double) Attacking.Strength / 100);
             TakenDamage += (int) Math.Round(+BonusDamage);
             DamageAbsorb = TakenDamage * ((double) Defending.Defence / 100);
@@ -198,10 +210,10 @@ namespace poke.methd
             set => _enemy = value;
         }
 
-        public TeamPlayer Player
+        public Bag Bag
         {
-            get => _player;
-            set => _player = value;
+            get => _bag;
+            set => _bag = value;
         }
 
         public bool IsBattelTime

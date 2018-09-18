@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -39,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="pokemon\Interfaces\ItemInterFace.cs" />
+    <Compile Include="pokemon\Interfaces\TeamInterface.cs" />
     <Compile Include="pokemon\methd\Battle.cs" />
     <Compile Include="pokemon\methd\MainMenu.cs" />
     <Compile Include="pokemon\methd\package-info.cs" />
@@ -51,9 +57,11 @@
     <Compile Include="pokemon\savs\Generate.cs" />
     <Compile Include="pokemon\savs\package-info.cs" />
     <Compile Include="pokemon\savs\TeamEnemy.cs" />
-    <Compile Include="pokemon\savs\TeamInterface.cs" />
-    <Compile Include="pokemon\savs\TeamPlayer.cs" />
+    <Compile Include="pokemon\savs\Bag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
