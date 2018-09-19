@@ -3,9 +3,9 @@
 	public class Attack
 	{
 
-		private string attackName;
-		private string attacktyp;
-		private int damage;
+		private string _attackName;
+		private string _attacktyp;
+		private int _damage;
 
 		public Attack()
 		{
@@ -14,32 +14,32 @@
 
 		public Attack(string attakName, string attacktyp, int damage) : base()
 		{
-			this.attackName = attakName;
-			this.attacktyp = attacktyp;
-			this.damage = damage;
+			this._attackName = attakName;
+			this._attacktyp = attacktyp;
+			this._damage = damage;
 		}
 
 		public Attack(Attack AttackFromNew)
 		{
-			this.attackName = AttackFromNew.AttakName;
-			this.attacktyp = AttackFromNew.Attacktyp;
-			this.damage = AttackFromNew.Damage;
+			this._attackName = AttackFromNew.AttackName;
+			this._attacktyp = AttackFromNew.Attacktyp;
+			this._damage = AttackFromNew.Damage;
 		}
 
 		public override string ToString()
 		{
-			return attackName + "  " + attacktyp + "  " + damage;
+			return _attackName + "  " + _attacktyp + "  " + _damage;
 		}
 
-		public virtual string AttakName
+		public virtual string AttackName
 		{
 			get
 			{
-				return attackName;
+				return _attackName;
 			}
 			set
 			{
-				this.attackName = value;
+				this._attackName = value;
 			}
 		}
 
@@ -48,11 +48,11 @@
 		{
 			get
 			{
-				return attacktyp;
+				return _attacktyp;
 			}
 			set
 			{
-				this.attacktyp = value;
+				this._attacktyp = value;
 			}
 		}
 
@@ -61,11 +61,11 @@
 		{
 			get
 			{
-				return damage;
+				return _damage;
 			}
 			set
 			{
-				this.damage = value;
+				this._damage = value;
 			}
 		}
 

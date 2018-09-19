@@ -22,9 +22,11 @@ namespace poke.methd
 
             Bag.SetBag();
             Enemy.SetBag();
+            
+            Bag.LoadBAg();
 
 
-            Bag.Team[0].Name = "Fritz";
+            /*Bag.Team[0].Name = "Fritz";
             Bag.ChangeAttack(0, 3, "vines");
             Enemy.Team[0].Name = "Hans";
             bool IsPlaying = true;
@@ -69,6 +71,7 @@ namespace poke.methd
             BattleStart.Bag = Bag;
             BattleStart.IsSingelPokemon = IsSingelPokemon;
             BattleStart.BattelMenu();
+        }*/
         }
     }
 }

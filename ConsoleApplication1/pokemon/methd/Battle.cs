@@ -145,7 +145,7 @@ namespace poke.methd
 
             DamageCalculation(
                 Bag.Team[Bag.ActivePokemon],
-                Bag.Team[Bag.ActivePokemon].PokeAttackHash[ChosenAttack],
+                Bag.Team[Bag.ActivePokemon].PokeAttackList[ChosenAttack],
                 Enemy.Team[Enemy.ActivePokemon]
             );
             Console.WriteLine("______PlayerTurnEnd_________");
@@ -159,11 +159,11 @@ namespace poke.methd
             int RandomNumber = random.Next(0, 3);
 
             Console.WriteLine("Randomnumber" + RandomNumber);
-            //Console.WriteLine(Enemy.Team[Enemy.ActivePokemon].PokeAttackHash[RandomNumber].ToString());
+            //Console.WriteLine(Enemy.Team[Enemy.ActivePokemon].PokeAttackList[RandomNumber].ToString());
 
             DamageCalculation(
                 Enemy.Team[Enemy.ActivePokemon],
-                Enemy.Team[Enemy.ActivePokemon].PokeAttackHash[RandomNumber],
+                Enemy.Team[Enemy.ActivePokemon].PokeAttackList[RandomNumber],
                 Bag.Team[Bag.ActivePokemon]
             );
             Console.WriteLine("______EnemyTurnEnd_________");

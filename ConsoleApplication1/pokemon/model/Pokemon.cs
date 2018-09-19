@@ -5,7 +5,7 @@ namespace poke.model
 {
     public class Pokemon
     {
-        private string _name;
+        private string _pokemoName;
         private string _pokemonArt;
         private int _livePoints;
         private int _maxLivePoints;
@@ -20,11 +20,11 @@ namespace poke.model
         {
         }
 
-        public Pokemon(string _name, string _pokemonArt, int _livePoints, int _maxLivePoints, string _typ1,
+        public Pokemon(string pokemoName, string _pokemonArt, int _livePoints, int _maxLivePoints, string _typ1,
             string _typ2, int _initiative,
             int _strength, int _defence, Attack a1, Attack a2, Attack a3, Attack a4) : base()
         {
-            this._name = _name;
+            this._pokemoName = pokemoName;
             this._pokemonArt = _pokemonArt;
             this._livePoints = _livePoints;
             this._maxLivePoints = _maxLivePoints;
@@ -41,7 +41,7 @@ namespace poke.model
 
         public Pokemon(Pokemon PokemonFromList)
         {
-            this._name = PokemonFromList._name;
+            this._pokemoName = PokemonFromList._pokemoName;
             this._pokemonArt = PokemonFromList._pokemonArt;
             this._livePoints = PokemonFromList._livePoints;
             this._maxLivePoints = PokemonFromList._maxLivePoints;
@@ -65,7 +65,7 @@ namespace poke.model
 
         public override string ToString()
         {
-            return "name: " + _name + " PokemonArt: " + _pokemonArt + " LivePoints: " + _livePoints +
+            return "name: " + _pokemoName + " PokemonArt: " + _pokemonArt + " LivePoints: " + _livePoints +
                    " maxLivePoints: " + _maxLivePoints + " Typ1" + _typ1 +
                    " Typ2: " + _typ2 + " initiative: " + _initiative + " strength: " + _strength + " defence: " +
                    _defence +
@@ -74,17 +74,23 @@ namespace poke.model
 
         public string ToStringWithOutAttacks()
         {
-            return "name: " + _name + " PokemonArt: " + _pokemonArt + " LivePoints: " + _livePoints +
+            return "name: " + _pokemoName + " PokemonArt: " + _pokemonArt + " LivePoints: " + _livePoints +
                    " maxLivePoints: " + _maxLivePoints + " Typ1" + _typ1 +
                    " Typ2: " + _typ2 + " initiative: " + _initiative + " strength: " + _strength + " defence: " +
                    _defence;
         }
 
 
-        public string Name
+        public string PokemonName
         {
-            get => _name;
-            set => _name = value;
+            get => _pokemoName;
+            set => _pokemoName = value;
+        }
+
+        public string PokemonArt
+        {
+            get => _pokemonArt;
+           
         }
 
         public int LivePoints
@@ -141,7 +147,7 @@ namespace poke.model
             set => _defence = value;
         }
 
-        public List<Attack> PokeAttackHash
+        public List<Attack> PokeAttackList
         {
             get => _pokeAttackList;
             set => _pokeAttackList = value;

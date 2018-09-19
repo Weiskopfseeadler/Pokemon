@@ -43,7 +43,7 @@ namespace pokemon.savs
             _dictionaryOfAttacks[""] = new Attack("", "", 0);
             _dictionaryOfAttacks["vines"] = new Attack("Vines", "plants", 200);
             _dictionaryOfAttacks["scratch"] = new Attack("Scratch", "normal", 12);
-            _dictionaryOfAttacks["thunder"] = new Attack("thunder", "electricity", 40);
+            _dictionaryOfAttacks["thunder"] = new Attack("Thunder", "electricity", 40);
             _dictionaryOfAttacks["glow"] = new Attack("Glow", "fire", 25);
             _dictionaryOfAttacks["spark"] = new Attack("Spark", "electricity", 10);
             _dictionaryOfAttacks["flamethrower"] = new Attack("Flamethrower", "fire", 50);
@@ -60,7 +60,7 @@ namespace pokemon.savs
                     _dictionaryOfAttacks[""], _dictionaryOfAttacks[""]));
 
             DictionaryOfPokemons.Add("empty",
-                new Pokemon("", "", 0, 0, "", "", 0, 0, 0,_dictionaryOfAttacks["vines"], _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
+                new Pokemon("", "", 0, 0, "", "", 0, 0, 0,_dictionaryOfAttacks[""], _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
                     _dictionaryOfAttacks[""]));
 
             DictionaryOfPokemons["pikatchu"] = new Pokemon("Pikatchu", "pikatchu", 200, 200, "electricity", "", 20, 20, 5,
