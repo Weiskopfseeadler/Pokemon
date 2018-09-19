@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="104a45b7-ade1-474f-8bc3-0514f238b6d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/TeamSave.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pokemon/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pokemon/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Pokemon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pokemon/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojResolveAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojResolveAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/Battle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/Battle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/TeamSave.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/BagSave.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Attack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Pokemon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Pokemon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +25,11 @@
     <session id="-367809107">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
@@ -42,7 +38,7 @@
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,16 +57,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="6378" />
-          <entry key="json" value="5" />
-          <entry key="txt" value="36" />
+          <entry key="cs" value="7276" />
+          <entry key="json" value="6" />
+          <entry key="txt" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="6378" />
-          <entry key="JSON" value="5" />
-          <entry key="PLAIN_TEXT" value="36" />
+          <entry key="C#" value="7276" />
+          <entry key="JSON" value="6" />
+          <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -79,16 +75,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/MainMenu.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="-8">
+              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
               <folding>
-                <marker date="1537343199789" expanded="false" signature="6:86" ph="..." />
-                <marker date="1537343199789" expanded="true" signature="136:2154" ph="{...}" />
-                <marker date="1537343199789" expanded="true" signature="189:2148" ph="{...}" />
-                <marker date="1537343199789" expanded="true" signature="554:2138" ph="/* Bag.Team[0].Name = &quot;Fritz&quot;; ... */" />
+                <marker date="1537387189810" expanded="false" signature="6:86" ph="..." />
+                <marker date="1537387189810" expanded="true" signature="108:2210" ph="{...}" />
+                <marker date="1537387189810" expanded="true" signature="136:2208" ph="{...}" />
+                <marker date="1537387189810" expanded="true" signature="189:1874" ph="{...}" />
+                <marker date="1537387189810" expanded="true" signature="756:1770" ph="{...}" />
+                <marker date="1537387189810" expanded="true" signature="1116:1756" ph="{...}" />
+                <marker date="1537387189810" expanded="true" signature="1964:2202" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -97,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/Battle.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2197">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="-2948">
+              <caret selection-end-line="230" selection-end-column="1" />
               <folding>
                 <marker date="1537347133227" expanded="false" signature="6:139" ph="..." />
                 <marker date="1537347133227" expanded="true" signature="161:7097" ph="{...}" />
@@ -138,49 +137,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="180" column="150" selection-start-line="180" selection-start-column="150" selection-end-line="180" selection-end-column="150" />
+            <state relative-caret-position="1087">
+              <caret line="167" column="25" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
               <folding>
-                <marker date="1537351335647" expanded="false" signature="6:307" ph="..." />
-                <marker date="1537351335647" expanded="true" signature="332:7691" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="371:7689" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="627:774" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="818:1081" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="899:1044" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="959:1030" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="1114:1764" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="1219:1319" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="1428:1541" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="1852:1976" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="2018:2860" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="2182:2850" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="2333:2570" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="2400:2552" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="2678:2836" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="2890:3486" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="3520:3618" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="3653:3733" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="3780:3862" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="3895:4244" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="4275:7683" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="4556:6724" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="4653:6710" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="5022:6529" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="6818:7061" ph="{...}" />
-                <marker date="1537351335647" expanded="true" signature="7075:7673" ph="/* int i = 0; ... */" />
+                <marker date="1537370157224" expanded="false" signature="6:348" ph="..." />
+                <marker date="1537370157224" expanded="true" signature="373:7287" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="412:7285" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="668:815" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="859:1122" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="940:1085" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="1000:1071" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="1155:1809" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="1260:1364" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="1473:1586" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="1897:2021" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="2063:2905" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="2227:2895" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="2378:2615" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="2445:2597" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="2723:2881" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="2935:3531" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="3565:3663" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="3698:3778" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="3825:3907" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="3947:4294" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="4325:5939" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="4580:5929" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="4677:5915" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="4826:5429" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="5984:7279" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="6069:7269" ph="{...}" />
+                <marker date="1537370157224" expanded="true" signature="6867:7255" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/TeamSave.json">
+        <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/BagSave.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="128">
+              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -192,6 +192,7 @@
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <marker date="1537257437510" expanded="false" signature="6:112" ph="..." />
+                <marker date="1537257437510" expanded="true" signature="136:404" ph="{...}" />
                 <marker date="1537257437510" expanded="true" signature="173:402" ph="{...}" />
               </folding>
             </state>
@@ -201,26 +202,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
+            <state relative-caret-position="475">
+              <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
               <folding>
-                <marker date="1537257437587" expanded="false" signature="6:84" ph="..." />
-                <marker date="1537257437587" expanded="true" signature="153:2814" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="345:492" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="536:799" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="617:762" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="677:748" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="887:963" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="1005:1433" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="1150:1423" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="1276:1409" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="1463:1982" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="2037:2561" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="2129:2190" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="2207:2268" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="2320:2551" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="2595:2693" ph="{...}" />
-                <marker date="1537257437587" expanded="true" signature="2728:2808" ph="{...}" />
+                <marker date="1537367929495" expanded="false" signature="6:84" ph="..." />
+                <marker date="1537367929495" expanded="true" signature="108:2825" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="153:2823" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="345:492" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="536:799" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="617:762" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="677:748" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="887:963" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="1005:1433" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="1150:1423" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="1276:1409" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="1463:1982" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="2037:2561" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="2129:2190" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="2207:2268" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="2320:2551" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="2604:2702" ph="{...}" />
+                <marker date="1537367929495" expanded="true" signature="2737:2817" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -229,19 +231,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Item.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="375">
+              <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
               <folding>
-                <marker date="1537255118911" expanded="false" signature="6:58" ph="..." />
-                <marker date="1537255118911" expanded="true" signature="100:2106" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="138:2104" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="394:570" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="629:1629" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="714:1572" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="1657:1737" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="1783:1883" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="1917:1972" ph="{...}" />
-                <marker date="1537255118911" expanded="true" signature="2004:2098" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="6:72" ph="..." />
+                <marker date="1537370157177" expanded="true" signature="114:2340" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="154:2338" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="417:601" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="660:1648" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="745:1603" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="1682:1851" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="1883:1971" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="2017:2117" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="2151:2206" ph="{...}" />
+                <marker date="1537370157177" expanded="true" signature="2238:2332" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -284,10 +287,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="105">
+              <caret line="34" column="51" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="51" />
               <folding>
                 <marker date="1537349084421" expanded="false" signature="6:112" ph="..." />
+                <marker date="1537349084421" expanded="true" signature="136:4623" ph="{...}" />
                 <marker date="1537349084421" expanded="false" signature="149:216" ph="..." />
                 <marker date="1537349084421" expanded="true" signature="243:4621" ph="{...}" />
                 <marker date="1537349084421" expanded="true" signature="676:1101" ph="/* public void generatTyps() ... */" />
@@ -385,17 +389,18 @@
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Enum.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/ItemInterFace.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamInterface.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Item.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamPlayer.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/Battle.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/package.json" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/MainMenu.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/TeamSave.json" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Pokemon.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Attack.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Item.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/BagSave.json" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/MainMenu.cs" />
       </list>
     </option>
   </component>
@@ -524,7 +529,8 @@
       <workItem from="1537252538453" duration="9008000" />
       <workItem from="1537287260448" duration="1138000" />
       <workItem from="1537342423072" duration="7105000" />
-      <workItem from="1537350727889" duration="605000" />
+      <workItem from="1537350727889" duration="755000" />
+      <workItem from="1537363426959" duration="12265000" />
     </task>
     <task id="LOCAL-00001" summary="Commit vom 17.09.18 23:01">
       <created>1537218105981</created>
@@ -540,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537264967431</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit vom 19.09.18 12:04">
+      <created>1537351481411</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537351481411</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83359000" />
+    <option name="totallyTimeSpent" value="95774000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,16 +569,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="959" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="934" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122068234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12313433" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.32363635" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35878786" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.3225" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35875" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961783" />
@@ -576,7 +589,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32961783" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50067115" side_tool="true" weight="0.26751593" />
-      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49932885" weight="0.2739394" />
+      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49932885" weight="0.39625" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -596,7 +609,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit vom 17.09.18 23:01" />
     <MESSAGE value="Commit vom 18.09.18 12:02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit vom 18.09.18 12:02" />
+    <MESSAGE value="Commit vom 19.09.18 12:04" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit vom 19.09.18 12:04" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -659,29 +673,120 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
-          <line>188</line>
-          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="168">
+          <line>180</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="194">
             <startOffsets>
-              <option value="6528" />
+              <option value="5891" />
             </startOffsets>
             <endOffsets>
-              <option value="6529" />
+              <option value="5897" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
-          <line>187</line>
-          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="174">
+          <line>157</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="155">
             <startOffsets>
-              <option value="-1" />
+              <option value="4793" />
             </startOffsets>
             <endOffsets>
-              <option value="-1" />
+              <option value="4826" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
+          <line>161</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="160">
+            <startOffsets>
+              <option value="4984" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4984" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
+          <line>162</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="161">
+            <startOffsets>
+              <option value="5013" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5052" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
+          <line>163</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="162">
+            <startOffsets>
+              <option value="5081" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5140" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
+          <line>164</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="163">
+            <startOffsets>
+              <option value="5169" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5216" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
+          <line>165</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="164">
+            <startOffsets>
+              <option value="5245" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5287" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
+          <line>166</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="165">
+            <startOffsets>
+              <option value="5316" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5403" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs</url>
+          <line>169</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs" initialLine="169">
+            <startOffsets>
+              <option value="5455" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5505" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -738,90 +843,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/MainMenu.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <marker date="1537343199789" expanded="false" signature="6:86" ph="..." />
-            <marker date="1537343199789" expanded="true" signature="136:2154" ph="{...}" />
-            <marker date="1537343199789" expanded="true" signature="189:2148" ph="{...}" />
-            <marker date="1537343199789" expanded="true" signature="554:2138" ph="/* Bag.Team[0].Name = &quot;Fritz&quot;; ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/Interfaces/TeamInterface.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <marker date="1537257437510" expanded="false" signature="6:112" ph="..." />
+            <marker date="1537257437510" expanded="true" signature="136:404" ph="{...}" />
             <marker date="1537257437510" expanded="true" signature="173:402" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
-          <folding>
-            <marker date="1537257437587" expanded="false" signature="6:84" ph="..." />
-            <marker date="1537257437587" expanded="true" signature="153:2814" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="345:492" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="536:799" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="617:762" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="677:748" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="887:963" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="1005:1433" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="1150:1423" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="1276:1409" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="1463:1982" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="2037:2561" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="2129:2190" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="2207:2268" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="2320:2551" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="2595:2693" ph="{...}" />
-            <marker date="1537257437587" expanded="true" signature="2728:2808" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <marker date="1537349084421" expanded="false" signature="6:112" ph="..." />
-            <marker date="1537349084421" expanded="false" signature="149:216" ph="..." />
-            <marker date="1537349084421" expanded="true" signature="243:4621" ph="{...}" />
-            <marker date="1537349084421" expanded="true" signature="676:1101" ph="/* public void generatTyps() ... */" />
-            <marker date="1537349084421" expanded="true" signature="1144:1393" ph="{...}" />
-            <marker date="1537349084421" expanded="true" signature="1446:2029" ph="{...}" />
-            <marker date="1537349084421" expanded="true" signature="2074:4079" ph="{...}" />
-            <marker date="1537349084421" expanded="true" signature="4149:4259" ph="{...}" />
-            <marker date="1537349084421" expanded="true" signature="4331:4443" ph="{...}" />
-            <marker date="1537349084421" expanded="true" signature="4509:4615" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Item.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding>
-            <marker date="1537255118911" expanded="false" signature="6:58" ph="..." />
-            <marker date="1537255118911" expanded="true" signature="100:2106" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="138:2104" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="394:570" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="629:1629" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="714:1572" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="1657:1737" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="1783:1883" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="1917:1972" ph="{...}" />
-            <marker date="1537255118911" expanded="true" signature="2004:2098" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -882,17 +911,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/TeamSave.json">
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/model/Item.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="375">
+          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+          <folding>
+            <marker date="1537370157177" expanded="true" signature="6:72" ph="..." />
+            <marker date="1537370157177" expanded="true" signature="114:2340" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="154:2338" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="417:601" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="660:1648" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="745:1603" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="1682:1851" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="1883:1971" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="2017:2117" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="2151:2206" ph="{...}" />
+            <marker date="1537370157177" expanded="true" signature="2238:2332" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/Battle.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2197">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="-2948">
+          <caret selection-end-line="230" selection-end-column="1" />
           <folding>
             <marker date="1537347133227" expanded="false" signature="6:139" ph="..." />
             <marker date="1537347133227" expanded="true" signature="161:7097" ph="{...}" />
@@ -931,38 +973,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="34" column="51" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="51" />
+          <folding>
+            <marker date="1537349084421" expanded="false" signature="6:112" ph="..." />
+            <marker date="1537349084421" expanded="true" signature="136:4623" ph="{...}" />
+            <marker date="1537349084421" expanded="false" signature="149:216" ph="..." />
+            <marker date="1537349084421" expanded="true" signature="243:4621" ph="{...}" />
+            <marker date="1537349084421" expanded="true" signature="676:1101" ph="/* public void generatTyps() ... */" />
+            <marker date="1537349084421" expanded="true" signature="1144:1393" ph="{...}" />
+            <marker date="1537349084421" expanded="true" signature="1446:2029" ph="{...}" />
+            <marker date="1537349084421" expanded="true" signature="2074:4079" ph="{...}" />
+            <marker date="1537349084421" expanded="true" signature="4149:4259" ph="{...}" />
+            <marker date="1537349084421" expanded="true" signature="4331:4443" ph="{...}" />
+            <marker date="1537349084421" expanded="true" signature="4509:4615" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+          <folding>
+            <marker date="1537367929495" expanded="false" signature="6:84" ph="..." />
+            <marker date="1537367929495" expanded="true" signature="108:2825" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="153:2823" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="345:492" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="536:799" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="617:762" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="677:748" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="887:963" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="1005:1433" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="1150:1423" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="1276:1409" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="1463:1982" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="2037:2561" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="2129:2190" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="2207:2268" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="2320:2551" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="2604:2702" ph="{...}" />
+            <marker date="1537367929495" expanded="true" signature="2737:2817" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Bag.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="180" column="150" selection-start-line="180" selection-start-column="150" selection-end-line="180" selection-end-column="150" />
+        <state relative-caret-position="1087">
+          <caret line="167" column="25" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
           <folding>
-            <marker date="1537351335647" expanded="false" signature="6:307" ph="..." />
-            <marker date="1537351335647" expanded="true" signature="332:7691" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="371:7689" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="627:774" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="818:1081" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="899:1044" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="959:1030" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="1114:1764" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="1219:1319" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="1428:1541" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="1852:1976" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="2018:2860" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="2182:2850" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="2333:2570" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="2400:2552" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="2678:2836" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="2890:3486" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="3520:3618" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="3653:3733" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="3780:3862" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="3895:4244" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="4275:7683" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="4556:6724" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="4653:6710" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="5022:6529" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="6818:7061" ph="{...}" />
-            <marker date="1537351335647" expanded="true" signature="7075:7673" ph="/* int i = 0; ... */" />
+            <marker date="1537370157224" expanded="false" signature="6:348" ph="..." />
+            <marker date="1537370157224" expanded="true" signature="373:7287" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="412:7285" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="668:815" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="859:1122" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="940:1085" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="1000:1071" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="1155:1809" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="1260:1364" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="1473:1586" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="1897:2021" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="2063:2905" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="2227:2895" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="2378:2615" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="2445:2597" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="2723:2881" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="2935:3531" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="3565:3663" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="3698:3778" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="3825:3907" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="3947:4294" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="4325:5939" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="4580:5929" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="4677:5915" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="4826:5429" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="5984:7279" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="6069:7269" ph="{...}" />
+            <marker date="1537370157224" expanded="true" signature="6867:7255" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/SaveFiles/BagSave.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/methd/MainMenu.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <folding>
+            <marker date="1537387189810" expanded="false" signature="6:86" ph="..." />
+            <marker date="1537387189810" expanded="true" signature="108:2210" ph="{...}" />
+            <marker date="1537387189810" expanded="true" signature="136:2208" ph="{...}" />
+            <marker date="1537387189810" expanded="true" signature="189:1874" ph="{...}" />
+            <marker date="1537387189810" expanded="true" signature="756:1770" ph="{...}" />
+            <marker date="1537387189810" expanded="true" signature="1116:1756" ph="{...}" />
+            <marker date="1537387189810" expanded="true" signature="1964:2202" ph="{...}" />
           </folding>
         </state>
       </provider>

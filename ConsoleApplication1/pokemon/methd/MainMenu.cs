@@ -21,14 +21,15 @@ namespace poke.methd
             Generate.GeneratItems();
 
             Bag.SetBag();
+            Bag.Serialize(Bag);
+            Bag.LoadBag();
             Enemy.SetBag();
-            
-            Bag.LoadBAg();
 
 
-            /*Bag.Team[0].Name = "Fritz";
+
+            Console.WriteLine(Bag.);
             Bag.ChangeAttack(0, 3, "vines");
-            Enemy.Team[0].Name = "Hans";
+            Enemy.Team[0].PokemonName = "Hans";
             bool IsPlaying = true;
             while (IsPlaying)
             {
@@ -36,7 +37,7 @@ namespace poke.methd
                                   "\n2 Kampf gegen Trainer" +
                                   "\n3 Kampf gegen Einzelnes Pokemon" +
                                   "\n4 Shop" +
-                                  "\n9 Quit");
+                                  "\n9 Quit" );
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
                     case 1:
@@ -53,11 +54,11 @@ namespace poke.methd
                         StartBattel(Enemy, Bag, true);
                         break;
                     case 9:
+                        Bag.Serialize(Bag);
                         IsPlaying = false;
                         break;
                 }
             }
-
 
             Console.WriteLine("battel over");
             Console.WriteLine(Bag.ToString());
@@ -71,7 +72,6 @@ namespace poke.methd
             BattleStart.Bag = Bag;
             BattleStart.IsSingelPokemon = IsSingelPokemon;
             BattleStart.BattelMenu();
-        }*/
         }
     }
 }

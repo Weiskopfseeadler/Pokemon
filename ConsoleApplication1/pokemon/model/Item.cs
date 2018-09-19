@@ -1,19 +1,19 @@
+using System;
 using ConsoleApplication1.pokemon.model;
 using poke.model;
 
 namespace ConsoleApplication1.poke.model
 {
-    public class Item:ItemInterFace
+    public class Item : ItemInterFace
     {
-
-        private string _name;
+        private string _itemName;
         private FunktionOfItem _funktionOfItem;
         private int _valueOfEffekt;
         private int _valueOfItem;
 
-        public Item(string name, FunktionOfItem funktionOfItem, int valueOfEffekt, int valueOfItem)
+        public Item(string itemName, FunktionOfItem funktionOfItem, int valueOfEffekt, int valueOfItem)
         {
-            _name = name;
+            _itemName = itemName;
             _funktionOfItem = funktionOfItem;
             _valueOfEffekt = valueOfEffekt;
             _valueOfItem = valueOfItem;
@@ -44,15 +44,21 @@ namespace ConsoleApplication1.poke.model
                         ;
                         break;
                 }
-            
+
 
             _valueOfEffekt -= 1;
         }
 
-        public string Name
+        public string ToString()
         {
-            get => _name;
-            set => _name = value;
+            return ItemName + Convert.ToString(FunktionOfItem) + Convert.ToString(ValueOfEffekt) +
+                   Convert.ToString(ValueOfItem);
+        }
+
+        public string ItemName
+        {
+            get => _itemName;
+            set => _itemName = value;
         }
 
         public FunktionOfItem FunktionOfItem

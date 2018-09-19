@@ -30,7 +30,7 @@
             <e p="Typ.cs" t="Include" />
           </e>
           <e p="SaveFiles" t="Include">
-            <e p="TeamSave.json" t="Include" />
+            <e p="BagSave.json" t="Include" />
           </e>
           <e p="savs" t="Include">
             <e p="Bag.cs" t="Include" />

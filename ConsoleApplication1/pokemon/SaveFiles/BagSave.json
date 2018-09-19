@@ -1,0 +1,52 @@
+{
+  "ActivePokemon": 0,
+  "Team": [
+    {
+      "PokemonName": "Patrick",
+      "PokemonArt": "",
+      "LivePoints": 0,
+      "MaxLivePoints": 0,
+      "Typ1": "",
+      "Typ2": "",
+      "Initiative": 0,
+      "Strength": 0,
+      "Defence": 0,
+      "PokeAttackList": [
+        {
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
+        },
+        {
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
+        },
+        {
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
+        },
+        {
+          "AttackName": "Vines",
+          "Attacktyp": "plants",
+          "Damage": 200
+        }
+      ]
+    }
+  ],
+  "Items": {
+    "SmallHealPotion": {
+      "ItemName": "SmallHealPotion",
+      "FunktionOfItem": 0,
+      "ValueOfEffekt": 50,
+      "ValueOfItem": 10
+    },
+    "SmallHeath": {
+      "ItemName": "SmallHeath",
+      "FunktionOfItem": 1,
+      "ValueOfEffekt": 50,
+      "ValueOfItem": 101
+    }
+  }
+}
