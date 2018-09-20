@@ -13,11 +13,8 @@ namespace pokemon.savs
     public class Generate
     {
         private static Dictionary<string, Attack> _dictionaryOfAttacks = new Dictionary<string, Attack>();
-
         private static Dictionary<string, Pokemon> _dictionaryOfPokemons = new Dictionary<string, Pokemon>();
-
-        private static Dictionary<string, Item> _dictionaryOfItems = new Dictionary<string, Item>();
-
+     
 
         public static void GeneratAttack()
         {
@@ -71,11 +68,19 @@ namespace pokemon.savs
                     _dictionaryOfAttacks["vines"], _dictionaryOfAttacks["tackel"], _dictionaryOfAttacks["petalDance"],
                     _dictionaryOfAttacks[""]));
         }
-        public static void Serialize( )
+
+        public static void Serialize()
         {
-            string outputJSON =Newtonsoft.Json.JsonConvert.SerializeObject(Generate._dictionaryOfPokemons, Newtonsoft.Json.Formatting.Indented);
+            string outputJSON = Newtonsoft.Json.JsonConvert.SerializeObject(Generate._dictionaryOfPokemons,
+                Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(
                 @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json",
+                outputJSON + Environment.NewLine);
+            
+             outputJSON = Newtonsoft.Json.JsonConvert.SerializeObject(Generate._dictionaryOfAttacks,
+                Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText(
+                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratAttack.json",
                 outputJSON + Environment.NewLine);
         }
 
@@ -86,46 +91,59 @@ namespace pokemon.savs
                 @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
             var LoadedBag = o1;
 
-            Console.WriteLine(o1);
 
-            //_dictionaryOfPokemons.Clear();
+            _dictionaryOfPokemons.Clear();
 
             foreach (var item in o1)
             {
-                Console.WriteLine(item);
-                Console.WriteLine(item.Name);
                 Console.WriteLine("______________");
-                Console.WriteLine(item.Value);
-                /*string Key = item.Name;
-                string Name = item.PokemonName;
-                string PokemonArt = item.PokemonArt;
-                int LivePoints = item.LivePoints;
-                int MaxLivePoints = item.MaxLivePoints;
-                string Typ1 = item.Typ1;
-                string Typ2 = item.Typ2;
-                int Initiative = item.Initiative;
-                int Strength = item.Strength;
-                int Defence = item.Defence;
-                
-                _dictionaryOfPokemons.Add(Key,new Pokemon(Name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2, Initiative,
-                    Strength, Defence, new Attack(), new Attack(), new Attack(), new Attack()));
-                for (int i = 0; i < item.PokeAttackList.Count; i++)
+                string Key = item.Name;
+                string Name = item.Value.PokemonName;
+                string PokemonArt = item.Value.PokemonArt;
+                int LivePoints = item.Value.LivePoints;
+                int MaxLivePoints = item.Value.MaxLivePoints;
+                string Typ1 = item.Value.Typ1;
+                string Typ2 = item.Value.Typ2;
+                int Initiative = item.Value.Initiative;
+                int Strength = item.Value.Strength;
+                int Defence = item.Value.Defence;
+
+                DictionaryOfPokemons.Add(Key, new Pokemon(Name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2,
+                    Initiative, Strength, Defence, new Attack(), new Attack(), new Attack(), new Attack()));
+                for (int i = 0; i < item.Value.PokeAttackList.Count; i++)
                 {
-                    string AttackName1 = item.PokeAttackList[i].AttackName;
-                    string Attacktyp1 = item.PokeAttackList[i].Attacktyp;
-                    int Damage1 = item.PokeAttackList[i].Damage;
+                    string AttackName1 = item.Value.Poke92AttackList[i].AttackName;
+                    string Attacktyp1 = item.Value.PokeAttackList[i].Attacktyp;
+                    int Damage1 = item.Value.PokeAttackList[i].Damage;
                     Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
-                    _dictionaryOfPokemons[Key].PokeAttackList[i] = A;
+                    DictionaryOfPokemons[Key].PokeAttackList[i] = A;
                 }
-*/
-
-
-
-                //}
             }
         }
 
+        public static void LoadAttack()
+        {
+            dynamic o1 = JToken.Parse(File.ReadAllText(
+                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
+            var LoadedBag = o1;
 
+
+            _dictionaryOfAttacks.Clear();
+
+            foreach (var item in o1)
+            {
+             
+
+                    string key = item.Name;
+                    string AttackName1 = item.Value.AttackName;
+                    string Attacktyp1 = item.Value.Attacktyp;
+                    int Damage1 = item.Value.Damage;
+                    Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
+                    _dictionaryOfAttacks.Add(key,A);
+                
+
+            }
+        }
 
         public static Dictionary<string, Attack> DictionaryOfAttacks
         {
@@ -139,10 +157,6 @@ namespace pokemon.savs
             set => _dictionaryOfPokemons = value;
         }
 
-        public static Dictionary<string, Item> DictionaryOfItems
-        {
-            get => _dictionaryOfItems;
-            set => _dictionaryOfItems = value;
-        }
+  
     }
 }

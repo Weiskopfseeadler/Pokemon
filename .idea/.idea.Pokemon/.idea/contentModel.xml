@@ -31,7 +31,8 @@
           </e>
           <e p="SaveFiles" t="Include">
             <e p="BagSave.json" t="Include" />
-            <e p="GeneratorPokemon.json" t="Include" />
+            <e p="GeneratAttack.json" t="Include" />
+            <e p="GeneratPokemon.json" t="Include" />
           </e>
           <e p="savs" t="Include">
             <e p="Bag.cs" t="Include" />

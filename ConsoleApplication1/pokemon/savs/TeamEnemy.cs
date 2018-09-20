@@ -53,39 +53,27 @@ namespace pokemon.savs
             }
         }
 
-        public void SetDefault()
-        {
-            this._activePokemon = 0;
-
-            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["charmander"]));
-            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-        }
 
         public void RandomEnemy(bool IsSingelPokemon)
         {
             int RadomNumber = Random.Next(0, 5);
+
             if (IsSingelPokemon)
-            {
-                RadomNumber = 0;
-            }
-            else
             {
                 RadomNumber = 0;
             }
 
             for (int i = 0; i <= RadomNumber; i++)
             {
-                _team[i] = Generate.DictionaryOfPokemons.ElementAt(Random.Next(0, Generate.DictionaryOfPokemons.Count))
-                    .Value;
+                int rand = Random.Next(0, Generate.DictionaryOfPokemons.Count);
+                Console.WriteLine(Generate.DictionaryOfPokemons.Count);
+                Console.WriteLine(rand);
+                _team.Clear();
+                _team.Add(new Pokemon(Generate.DictionaryOfPokemons.ElementAt(rand).Value));
                 Console.WriteLine(_team[i].ToString());
             }
         }
 
-       
 
         public int ActivePokemon
         {

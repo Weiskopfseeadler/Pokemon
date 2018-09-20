@@ -1,0 +1,57 @@
+{
+  "": {
+    "AttackName": "",
+    "Attacktyp": "",
+    "Damage": 0
+  },
+  "vines": {
+    "AttackName": "Vines",
+    "Attacktyp": "plants",
+    "Damage": 200
+  },
+  "scratch": {
+    "AttackName": "Scratch",
+    "Attacktyp": "normal",
+    "Damage": 12
+  },
+  "thunder": {
+    "AttackName": "Thunder",
+    "Attacktyp": "electricity",
+    "Damage": 40
+  },
+  "glow": {
+    "AttackName": "Glow",
+    "Attacktyp": "fire",
+    "Damage": 25
+  },
+  "spark": {
+    "AttackName": "Spark",
+    "Attacktyp": "electricity",
+    "Damage": 10
+  },
+  "flamethrower": {
+    "AttackName": "Flamethrower",
+    "Attacktyp": "fire",
+    "Damage": 50
+  },
+  "bubel": {
+    "AttackName": "Bubel",
+    "Attacktyp": "water",
+    "Damage": 30
+  },
+  "waterGun": {
+    "AttackName": "Water Gun",
+    "Attacktyp": "water",
+    "Damage": 50
+  },
+  "tackel": {
+    "AttackName": "Tackel",
+    "Attacktyp": "normal",
+    "Damage": 10
+  },
+  "petalDance": {
+    "AttackName": "Petal Dance",
+    "Attacktyp": "plant",
+    "Damage": 40
+  }
+}

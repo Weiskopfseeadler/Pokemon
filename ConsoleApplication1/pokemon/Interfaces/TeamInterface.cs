@@ -13,6 +13,5 @@ namespace pokemon.savs
         bool CheckAreAllPokemonKO();
         void ChangeAttack(int indexPokemon, int indexAttacke, string attackKey);
         void CangeAktivePokemon();
-        void SetDefault();
     }
 }

@@ -66,7 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="pokemon\SaveFiles\BagSave.json" />
-    <Content Include="pokemon\SaveFiles\GeneratorPokemon.json" />
+    <Content Include="pokemon\SaveFiles\GeneratPokemon.json" />
+    <Content Include="pokemon\SaveFiles\GeneratAttack.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -19,21 +19,13 @@ namespace poke.methd
 
 
             Generate.GeneratAttack();
-            Generate.GeneratPokemon();
             Generate.Serialize();
+            Generate.LoadAttack();
             Generate.LoadGeneratorPokemon();
 
 //          Bag.SetDefault();
 //          Bag.Serialize(Bag);
             Bag.LoadBag();
-            Enemy.SetDefault();
-
-
-
-            Console.WriteLine(Bag.Team[0].PokemonName);
-            
-           // Bag.ChangeAttack(0, 3, "vines");
-            Enemy.Team[0].PokemonName = "Hans";
             bool IsPlaying = true;
             while (IsPlaying)
             {

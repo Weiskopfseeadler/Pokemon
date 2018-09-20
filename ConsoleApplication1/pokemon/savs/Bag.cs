@@ -100,9 +100,7 @@ namespace pokemon.savs
                         Console.WriteLine("Nummer " + (y + 1) + "   " + _team[y].ToStringWithOutAttacks());
                     }
                 }
-
                 index = Convert.ToInt32(Console.ReadLine());
-
                 if (index > 0 && index <= 6)
                 {
                     pokemonNotChosen = false;
@@ -115,7 +113,7 @@ namespace pokemon.savs
         public void SetDefault()
         {
             this._activePokemon = 0;
-            _items = Generate.DictionaryOfItems;
+        
 
             this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["pikatchu"]));
             this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
@@ -136,14 +134,12 @@ namespace pokemon.savs
         public void LoadBag()
         {
             dynamic o1 = JToken.Parse(File.ReadAllText(
-                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\BagSave.json"));
+            @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\BagSave.json"));
             var LoadedBag = o1;
 
             foreach (var Item in LoadedBag)
             {
                 Console.WriteLine(Item.Name);
-
-
                 switch (Item.Name)
                 {
                     case "Money": 
@@ -152,9 +148,6 @@ namespace pokemon.savs
                         Items.Clear();
                         foreach (var Item2 in Item.Value)
                         {
-                            Console.WriteLine(Item2.Name);
-                            Console.WriteLine(Item2.Value.ValueOfItem);
-
                             string ItemName = Item2.Value.ItemName;
                             FunktionOfItem FunktionOfItem = Item2.Value.FunktionOfItem;
                             int ValueeOfEffekt = Item2.Value.ValueOfEffekt;
@@ -162,12 +155,9 @@ namespace pokemon.savs
                             int Price = Item2.Value.Price;
                             Items.Add(Item2.Name, new Item(ItemName, FunktionOfItem, ValueeOfEffekt, ValueOfItem,Price));
                         }
-
-                        Console.WriteLine(Items["SmallHeath"].ToString());
                         ;
                         break;
                     case "ActivePokemon":
-                        Console.WriteLine(Item.Name);
                         ActivePokemon = Item.Value;
                         ;
                         break;
@@ -185,8 +175,6 @@ namespace pokemon.savs
             Team.Clear();
             foreach (var item2 in item.Value)
             {
-                Console.WriteLine(item2);
-
                 string name = item2.PokemonName;
                 string PokemonArt = item2.PokemonArt;
                 int LivePoints = item2.LivePoints;
