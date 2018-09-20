@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.AccessControl;
 using pokemon.savs;
 
 namespace poke.methd
@@ -18,17 +20,19 @@ namespace poke.methd
 
             Generate.GeneratAttack();
             Generate.GeneratPokemon();
-            Generate.GeneratItems();
+            Generate.Serialize();
+            Generate.LoadGeneratorPokemon();
 
-            Bag.SetBag();
-            Bag.Serialize(Bag);
+//          Bag.SetDefault();
+//          Bag.Serialize(Bag);
             Bag.LoadBag();
-            Enemy.SetBag();
+            Enemy.SetDefault();
 
 
 
-            Console.WriteLine(Bag.);
-            Bag.ChangeAttack(0, 3, "vines");
+            Console.WriteLine(Bag.Team[0].PokemonName);
+            
+           // Bag.ChangeAttack(0, 3, "vines");
             Enemy.Team[0].PokemonName = "Hans";
             bool IsPlaying = true;
             while (IsPlaying)
@@ -42,7 +46,7 @@ namespace poke.methd
                 {
                     case 1:
 
-                        Bag.ChoseItem()
+                        Bag.ChoseItem(null)
                             ;
                         break;
                     case 2:
@@ -51,8 +55,16 @@ namespace poke.methd
                         break;
                     case 3:
                         Enemy.RandomEnemy(true);
-                        StartBattel(Enemy, Bag, true);
+                        StartBattel(Enemy, Bag,
+                        true);
                         break;
+                    case 4:
+                        Console.WriteLine("Was soll gekauft Werden");
+                        Bag.ListAllItem();
+                        string ItemToBuy=Console.ReadLine();
+                        Bag.Items[ItemToBuy].ValueOfItem += 1;
+                        Bag.Mony -= Bag.Items[ItemToBuy].Price
+                        ;break;
                     case 9:
                         Bag.Serialize(Bag);
                         IsPlaying = false;

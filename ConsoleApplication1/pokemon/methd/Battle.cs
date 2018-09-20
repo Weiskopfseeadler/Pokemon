@@ -21,7 +21,8 @@ namespace poke.methd
             while (_isBattelTime)
             {
                 int ChosenAttack = 0;
-                Console.WriteLine(" Battle \n Pokemon \n Items\n Flucht");
+                Console.WriteLine(" Battle \n Pokemon \n Items");
+                CheckStatus();
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
                     case 1:
@@ -31,16 +32,25 @@ namespace poke.methd
                         Bag.CangeAktivePokemon();
                         break;
                     case 3:
-                        Bag.ChoseItem();
+                        if (_isSingelPokemon)
+                        {
+                            Bag.ChoseItem(Enemy.Team[0]);
+                        }
+                        else
+                        {
+                            Bag.ChoseItem(null);
+                        }
+                        
                         break;
                 }
 
                 BattlePhase(ChosenAttack);
                 CheckStatus();
             }
-            Random rand = new Random();
-           // int minGewin =;
-            
+            Random Rand = new Random();
+           int mingain = 100*Enemy.Team.Count;
+            int maxgain = 500 * Enemy.Team.Count;
+            Bag.Mony = Rand.Next(mingain, maxgain);
         }
 
         private void CheckStatus()
@@ -204,6 +214,7 @@ namespace poke.methd
             Console.WriteLine("________CalculationEnd____________");
         }
 
+        
         public TeamEnemy Enemy
         {
             get => _enemy;

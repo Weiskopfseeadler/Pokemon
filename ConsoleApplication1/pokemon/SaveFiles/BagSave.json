@@ -1,8 +1,141 @@
 {
+  "Mony": 0,
   "ActivePokemon": 0,
   "Team": [
     {
-      "PokemonName": "Patrick",
+      "PokemonName": "Fritz",
+      "PokemonArt": "pikatchu",
+      "LivePoints": 119,
+      "MaxLivePoints": 200,
+      "Typ1": "electricity",
+      "Typ2": "",
+      "Initiative": 25,
+      "Strength": 25,
+      "Defence": 5,
+      "PokeAttackList": [
+        {
+          "AttackName": "Spark",
+          "Attacktyp": "electricity",
+          "Damage": 10
+        },
+        {
+          "AttackName": "Thunder",
+          "Attacktyp": "electricity",
+          "Damage": 400
+        },
+        {
+          "AttackName": "Scratch",
+          "Attacktyp": "normal",
+          "Damage": 12
+        },
+        {
+          "AttackName": "Glow",
+          "Attacktyp": "fire",
+          "Damage": 25
+        }
+      ]
+    },
+    {
+      "PokemonName": "evoli",
+      "PokemonArt": "evoli",
+      "LivePoints": 0,
+      "MaxLivePoints": 150,
+      "Typ1": "normal",
+      "Typ2": "",
+      "Initiative": 20,
+      "Strength": 5,
+      "Defence": 10,
+      "PokeAttackList": [
+        {
+          "AttackName": "Scratch",
+          "Attacktyp": "normal",
+          "Damage": 12
+        },
+        {
+          "AttackName": "Flamethrower",
+          "Attacktyp": "fire",
+          "Damage": 50
+        },
+        {
+          "AttackName": "Flamethrower",
+          "Attacktyp": "fire",
+          "Damage": 50
+        },
+        {
+          "AttackName": "Flamethrower",
+          "Attacktyp": "fire",
+          "Damage": 50
+        }
+      ]
+    },
+    {
+      "PokemonName": "Pikatchu",
+      "PokemonArt": "pikatchu",
+      "LivePoints": 0,
+      "MaxLivePoints": 200,
+      "Typ1": "electricity",
+      "Typ2": "",
+      "Initiative": 20,
+      "Strength": 20,
+      "Defence": 5,
+      "PokeAttackList": [
+        {
+          "AttackName": "Spark",
+          "Attacktyp": "electricity",
+          "Damage": 10
+        },
+        {
+          "AttackName": "Thunder",
+          "Attacktyp": "electricity",
+          "Damage": 40
+        },
+        {
+          "AttackName": "Scratch",
+          "Attacktyp": "normal",
+          "Damage": 12
+        },
+        {
+          "AttackName": "Glow",
+          "Attacktyp": "fire",
+          "Damage": 25
+        }
+      ]
+    },
+    {
+      "PokemonName": "Pikatchu",
+      "PokemonArt": "pikatchu",
+      "LivePoints": 200,
+      "MaxLivePoints": 200,
+      "Typ1": "electricity",
+      "Typ2": "",
+      "Initiative": 20,
+      "Strength": 20,
+      "Defence": 5,
+      "PokeAttackList": [
+        {
+          "AttackName": "Spark",
+          "Attacktyp": "electricity",
+          "Damage": 10
+        },
+        {
+          "AttackName": "Thunder",
+          "Attacktyp": "electricity",
+          "Damage": 40
+        },
+        {
+          "AttackName": "Scratch",
+          "Attacktyp": "normal",
+          "Damage": 12
+        },
+        {
+          "AttackName": "Glow",
+          "Attacktyp": "fire",
+          "Damage": 25
+        }
+      ]
+    },
+    {
+      "PokemonName": "",
       "PokemonArt": "",
       "LivePoints": 0,
       "MaxLivePoints": 0,
@@ -28,9 +161,42 @@
           "Damage": 0
         },
         {
-          "AttackName": "Vines",
-          "Attacktyp": "plants",
-          "Damage": 200
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
+        }
+      ]
+    },
+    {
+      "PokemonName": "",
+      "PokemonArt": "",
+      "LivePoints": 0,
+      "MaxLivePoints": 0,
+      "Typ1": "",
+      "Typ2": "",
+      "Initiative": 0,
+      "Strength": 0,
+      "Defence": 0,
+      "PokeAttackList": [
+        {
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
+        },
+        {
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
+        },
+        {
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
+        },
+        {
+          "AttackName": "",
+          "Attacktyp": "",
+          "Damage": 0
         }
       ]
     }
@@ -39,14 +205,51 @@
     "SmallHealPotion": {
       "ItemName": "SmallHealPotion",
       "FunktionOfItem": 0,
-      "ValueOfEffekt": 50,
-      "ValueOfItem": 10
+      "ValueOfEffekt": 46,
+      "ValueOfItem": 8,
+      "Price": 100
     },
     "SmallHeath": {
       "ItemName": "SmallHeath",
       "FunktionOfItem": 1,
       "ValueOfEffekt": 50,
-      "ValueOfItem": 101
+      "ValueOfItem": 101,
+      "Price": 100
+    },
+    "Pokeball": {
+      "ItemName": "Pokeball",
+      "FunktionOfItem": 5,
+      "ValueOfEffekt": 10,
+      "ValueOfItem": 4,
+      "Price": 100
+    },
+    "Megaball": {
+      "ItemName": "Megaball",
+      "FunktionOfItem": 5,
+      "ValueOfEffekt": 100,
+      "ValueOfItem": 3,
+      "Price": 100
+    },
+    "SmalStrenthPotion": {
+      "ItemName": "SmalStrenthPotion",
+      "FunktionOfItem": 2,
+      "ValueOfEffekt": 5,
+      "ValueOfItem": 0,
+      "Price": 100
+    },
+    "SmalDefencePotion": {
+      "ItemName": "SmalDefencePotion",
+      "FunktionOfItem": 4,
+      "ValueOfEffekt": 4,
+      "ValueOfItem": 1,
+      "Price": 100
+    },
+    "SmalInitativPotion": {
+      "ItemName": "SmalInitativPotion",
+      "FunktionOfItem": 4,
+      "ValueOfEffekt": 5,
+      "ValueOfItem": 1,
+      "Price": 100
     }
   }
 }

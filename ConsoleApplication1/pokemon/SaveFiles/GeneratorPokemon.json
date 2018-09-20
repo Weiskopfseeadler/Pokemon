@@ -1,0 +1,233 @@
+{
+  "empty": {
+    "PokemonName": "",
+    "PokemonArt": "",
+    "LivePoints": 0,
+    "MaxLivePoints": 0,
+    "Typ1": "",
+    "Typ2": "",
+    "Initiative": 0,
+    "Strength": 0,
+    "Defence": 0,
+    "PokeAttackList": [
+      {
+        "AttackName": "",
+        "Attacktyp": "",
+        "Damage": 0
+      },
+      {
+        "AttackName": "",
+        "Attacktyp": "",
+        "Damage": 0
+      },
+      {
+        "AttackName": "",
+        "Attacktyp": "",
+        "Damage": 0
+      },
+      {
+        "AttackName": "",
+        "Attacktyp": "",
+        "Damage": 0
+      }
+    ]
+  },
+  "Psyduck": {
+    "PokemonName": "Psyduck",
+    "PokemonArt": "Psyduck",
+    "LivePoints": 10,
+    "MaxLivePoints": 10,
+    "Typ1": "water",
+    "Typ2": "",
+    "Initiative": 0,
+    "Strength": 0,
+    "Defence": 0,
+    "PokeAttackList": [
+      {
+        "AttackName": "Scratch",
+        "Attacktyp": "normal",
+        "Damage": 12
+      },
+      {
+        "AttackName": "Water Gun",
+        "Attacktyp": "water",
+        "Damage": 50
+      },
+      {
+        "AttackName": "Bubel",
+        "Attacktyp": "water",
+        "Damage": 30
+      },
+      {
+        "AttackName": "Tackel",
+        "Attacktyp": "normal",
+        "Damage": 10
+      }
+    ]
+  },
+  "Squirtle": {
+    "PokemonName": "Squirtle",
+    "PokemonArt": "Squirtle",
+    "LivePoints": 275,
+    "MaxLivePoints": 275,
+    "Typ1": "water",
+    "Typ2": "",
+    "Initiative": 5,
+    "Strength": 5,
+    "Defence": 30,
+    "PokeAttackList": [
+      {
+        "AttackName": "Bubel",
+        "Attacktyp": "water",
+        "Damage": 30
+      },
+      {
+        "AttackName": "Tackel",
+        "Attacktyp": "normal",
+        "Damage": 10
+      },
+      {
+        "AttackName": "Scratch",
+        "Attacktyp": "normal",
+        "Damage": 12
+      },
+      {
+        "AttackName": "Water Gun",
+        "Attacktyp": "water",
+        "Damage": 50
+      }
+    ]
+  },
+  "pikatchu": {
+    "PokemonName": "Pikatchu",
+    "PokemonArt": "pikatchu",
+    "LivePoints": 200,
+    "MaxLivePoints": 200,
+    "Typ1": "electricity",
+    "Typ2": "",
+    "Initiative": 20,
+    "Strength": 20,
+    "Defence": 5,
+    "PokeAttackList": [
+      {
+        "AttackName": "Spark",
+        "Attacktyp": "electricity",
+        "Damage": 10
+      },
+      {
+        "AttackName": "Thunder",
+        "Attacktyp": "electricity",
+        "Damage": 40
+      },
+      {
+        "AttackName": "Scratch",
+        "Attacktyp": "normal",
+        "Damage": 12
+      },
+      {
+        "AttackName": "Vines",
+        "Attacktyp": "plants",
+        "Damage": 200
+      }
+    ]
+  },
+  "charmander": {
+    "PokemonName": "Charmander",
+    "PokemonArt": "charmander",
+    "LivePoints": 225,
+    "MaxLivePoints": 225,
+    "Typ1": "fire",
+    "Typ2": "",
+    "Initiative": 5,
+    "Strength": 20,
+    "Defence": 10,
+    "PokeAttackList": [
+      {
+        "AttackName": "Glow",
+        "Attacktyp": "fire",
+        "Damage": 25
+      },
+      {
+        "AttackName": "Scratch",
+        "Attacktyp": "normal",
+        "Damage": 12
+      },
+      {
+        "AttackName": "Flamethrower",
+        "Attacktyp": "fire",
+        "Damage": 50
+      },
+      {
+        "AttackName": "Flamethrower",
+        "Attacktyp": "fire",
+        "Damage": 50
+      }
+    ]
+  },
+  "evoli": {
+    "PokemonName": "evoli",
+    "PokemonArt": "evoli",
+    "LivePoints": 150,
+    "MaxLivePoints": 150,
+    "Typ1": "normal",
+    "Typ2": "",
+    "Initiative": 20,
+    "Strength": 5,
+    "Defence": 10,
+    "PokeAttackList": [
+      {
+        "AttackName": "Scratch",
+        "Attacktyp": "normal",
+        "Damage": 12
+      },
+      {
+        "AttackName": "Flamethrower",
+        "Attacktyp": "fire",
+        "Damage": 50
+      },
+      {
+        "AttackName": "Flamethrower",
+        "Attacktyp": "fire",
+        "Damage": 50
+      },
+      {
+        "AttackName": "Flamethrower",
+        "Attacktyp": "fire",
+        "Damage": 50
+      }
+    ]
+  },
+  "Snivy": {
+    "PokemonName": "Snivy",
+    "PokemonArt": "snivy",
+    "LivePoints": 150,
+    "MaxLivePoints": 150,
+    "Typ1": "plants",
+    "Typ2": "sds",
+    "Initiative": 30,
+    "Strength": 10,
+    "Defence": 10,
+    "PokeAttackList": [
+      {
+        "AttackName": "Vines",
+        "Attacktyp": "plants",
+        "Damage": 200
+      },
+      {
+        "AttackName": "Tackel",
+        "Attacktyp": "normal",
+        "Damage": 10
+      },
+      {
+        "AttackName": "Petal Dance",
+        "Attacktyp": "plant",
+        "Damage": 40
+      },
+      {
+        "AttackName": "",
+        "Attacktyp": "",
+        "Damage": 0
+      }
+    ]
+  }
+}

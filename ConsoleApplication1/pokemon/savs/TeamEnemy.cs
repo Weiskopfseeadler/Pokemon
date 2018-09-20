@@ -53,12 +53,12 @@ namespace pokemon.savs
             }
         }
 
-        public void SetBag()
+        public void SetDefault()
         {
             this._activePokemon = 0;
 
             _team.Add(new Pokemon(Generate.DictionaryOfPokemons["charmander"]));
-            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["evoli"]));
+            _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
             _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
             _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
             _team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
@@ -79,7 +79,7 @@ namespace pokemon.savs
 
             for (int i = 0; i <= RadomNumber; i++)
             {
-                _team[i] = Generate.DictionaryOfPokemons.ElementAt(Random.Next(0, Generate.DictionaryOfAttacks.Count))
+                _team[i] = Generate.DictionaryOfPokemons.ElementAt(Random.Next(0, Generate.DictionaryOfPokemons.Count))
                     .Value;
                 Console.WriteLine(_team[i].ToString());
             }

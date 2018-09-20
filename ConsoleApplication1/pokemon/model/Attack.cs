@@ -12,9 +12,9 @@
 
 		}
 
-		public Attack(string attakName, string attacktyp, int damage) : base()
+		public Attack(string attackName, string attacktyp, int damage) : base()
 		{
-			this._attackName = attakName;
+			this._attackName = attackName;
 			this._attacktyp = attacktyp;
 			this._damage = damage;
 		}
