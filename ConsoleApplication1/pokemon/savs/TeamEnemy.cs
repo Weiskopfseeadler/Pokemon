@@ -9,7 +9,7 @@ namespace pokemon.savs
     {
         private int _activePokemon;
         private List<Pokemon> _team = new List<Pokemon>();
-        public Random Random = new Random();
+        private Random Random = new Random();
         
 
         public bool CheckIsAktivePokemonKO()

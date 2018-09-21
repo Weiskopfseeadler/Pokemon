@@ -129,6 +129,7 @@ namespace pokemon.savs
                     DictionaryOfAttacks[""]));
         }
 
+        //Nicht in Gebrauch und deshalb nicht im UML
         public static void Serialize()
         {
             var OutputJSON = JsonConvert.SerializeObject(DictionaryOfPokemons,
