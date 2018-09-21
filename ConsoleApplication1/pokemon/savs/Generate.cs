@@ -1,92 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using ConsoleApplication1.poke.model;
-using ConsoleApplication1.pokemon.model;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using poke.model;
 
 namespace pokemon.savs
 {
-    using Attack = poke.model.Attack;
-    using Pokemon = poke.model.Pokemon;
-
     public class Generate
     {
-        private  static Dictionary<string, Attack> _dictionaryOfAttacks = new Dictionary<string, Attack>();
-        private static Dictionary<string, Pokemon> _dictionaryOfPokemons = new Dictionary<string, Pokemon>();
-        
-
-   
-
-        public static void GeneratAttack()
-        {
-            _dictionaryOfAttacks[""] = new Attack("", "", 0);
-            _dictionaryOfAttacks["vines"] = new Attack("Vines", "plants", 200);
-            _dictionaryOfAttacks["scratch"] = new Attack("Scratch", "normal", 12);
-            _dictionaryOfAttacks["thunder"] = new Attack("Thunder", "electricity", 40);
-            _dictionaryOfAttacks["glow"] = new Attack("Glow", "fire", 25);
-            _dictionaryOfAttacks["spark"] = new Attack("Spark", "electricity", 10);
-            _dictionaryOfAttacks["flamethrower"] = new Attack("Flamethrower", "fire", 50);
-            _dictionaryOfAttacks["bubel"] = new Attack("Bubel", "water", 30);
-            _dictionaryOfAttacks["waterGun"] = new Attack("Water Gun", "water", 50);
-            _dictionaryOfAttacks["tackel"] = new Attack("Tackel", "normal", 10);
-            _dictionaryOfAttacks["petalDance"] = new Attack("Petal Dance", "plant", 40);
-        }
-
-        public static void GeneratPokemon()
-        {
-            DictionaryOfPokemons.Add("empty",
-                new Pokemon("", "", 0, 0, "", "", 0, 0, 0, _dictionaryOfAttacks[""], _dictionaryOfAttacks[""],
-                    _dictionaryOfAttacks[""],
-                    _dictionaryOfAttacks[""]));
-
-            DictionaryOfPokemons.Add("Psyduck", new Pokemon("Psyduck", "Psyduck", 10, 10, "water", "", 0, 0, 0,
-                _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["waterGun"], _dictionaryOfAttacks["bubel"],
-                _dictionaryOfAttacks["tackel"]));
-
-            DictionaryOfPokemons.Add("Squirtle",
-                new Pokemon("Squirtle", "Squirtle", 275, 275, "water", "", 5, 5, 30, _dictionaryOfAttacks["bubel"],
-                    _dictionaryOfAttacks["tackel"],
-                    _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["waterGun"]));
-
-
-            DictionaryOfPokemons["pikatchu"] = new Pokemon("Pikatchu", "pikatchu", 200, 200, "electricity", "", 20, 20,
-                5,
-                _dictionaryOfAttacks["spark"], _dictionaryOfAttacks["thunder"], _dictionaryOfAttacks["scratch"],
-                _dictionaryOfAttacks["vines"]);
-
-            _dictionaryOfPokemons.Add("charmander",
-                new Pokemon("Charmander", "charmander", 225, 225, "fire", "", 5, 20, 10, _dictionaryOfAttacks["glow"],
-                    _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["flamethrower"],
-                    _dictionaryOfAttacks["flamethrower"]));
-
-            _dictionaryOfPokemons.Add("evoli", new Pokemon("evoli", "evoli", 150, 150, "normal", "", 20, 5, 10,
-                _dictionaryOfAttacks["scratch"], _dictionaryOfAttacks["flamethrower"],
-                _dictionaryOfAttacks["flamethrower"],
-                _dictionaryOfAttacks["flamethrower"]));
-
-            _dictionaryOfPokemons.Add("Snivy",
-                new Pokemon("Snivy", "snivy", 150, 150, "plants", "sds", 30, 10, 10,
-                    _dictionaryOfAttacks["vines"], _dictionaryOfAttacks["tackel"], _dictionaryOfAttacks["petalDance"],
-                    _dictionaryOfAttacks[""]));
-        }
-
-        public  static void Serialize()
-        {
-         
-            string outputJSON = Newtonsoft.Json.JsonConvert.SerializeObject(Generate._dictionaryOfPokemons,
-                Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(
-                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json",
-                outputJSON + Environment.NewLine);
-            
-             outputJSON = Newtonsoft.Json.JsonConvert.SerializeObject(Generate._dictionaryOfAttacks,
-                Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(
-                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratAttack.json",
-                outputJSON + Environment.NewLine);
-        }
-
 //Dies Funktion ist leider nicht verfügbar. Aus Zeitlichen Gründen Konte sie nicht Fertigestelt Werden
 /*        public  void LoadPokemon()
         {
@@ -150,18 +71,77 @@ namespace pokemon.savs
         }
 */
 
-        public static Dictionary<string, Attack> DictionaryOfAttacks
+        public static Dictionary<string, Attack> DictionaryOfAttacks { get; set; } = new Dictionary<string, Attack>();
+
+        public static Dictionary<string, Pokemon> DictionaryOfPokemons { get; set; } =new Dictionary<string, Pokemon>();
+
+
+        public static void GeneratAttack()
         {
-            get => _dictionaryOfAttacks;
-            set => _dictionaryOfAttacks = value;
+            DictionaryOfAttacks[""] = new Attack("", "", 0);
+            DictionaryOfAttacks["vines"] = new Attack("Vines", "plants", 200);
+            DictionaryOfAttacks["scratch"] = new Attack("Scratch", "normal", 12);
+            DictionaryOfAttacks["thunder"] = new Attack("Thunder", "electricity", 40);
+            DictionaryOfAttacks["glow"] = new Attack("Glow", "fire", 25);
+            DictionaryOfAttacks["spark"] = new Attack("Spark", "electricity", 10);
+            DictionaryOfAttacks["flamethrower"] = new Attack("Flamethrower", "fire", 50);
+            DictionaryOfAttacks["bubel"] = new Attack("Bubel", "water", 30);
+            DictionaryOfAttacks["waterGun"] = new Attack("Water Gun", "water", 50);
+            DictionaryOfAttacks["tackel"] = new Attack("Tackel", "normal", 10);
+            DictionaryOfAttacks["petalDance"] = new Attack("Petal Dance", "plant", 40);
         }
 
-        public static Dictionary<string, Pokemon> DictionaryOfPokemons
+        public static void GeneratPokemon()
         {
-            get => _dictionaryOfPokemons;
-            set => _dictionaryOfPokemons = value;
+            DictionaryOfPokemons.Add("empty",
+                new Pokemon("", "", 0, 0, "", "", 0, 0, 0, DictionaryOfAttacks[""], DictionaryOfAttacks[""],
+                    DictionaryOfAttacks[""],
+                    DictionaryOfAttacks[""]));
+
+            DictionaryOfPokemons.Add("Psyduck", new Pokemon("Psyduck", "Psyduck", 10, 10, "water", "", 0, 0, 0,
+                DictionaryOfAttacks["scratch"], DictionaryOfAttacks["waterGun"], DictionaryOfAttacks["bubel"],
+                DictionaryOfAttacks["tackel"]));
+
+            DictionaryOfPokemons.Add("Squirtle",
+                new Pokemon("Squirtle", "Squirtle", 275, 275, "water", "", 5, 5, 30, DictionaryOfAttacks["bubel"],
+                    DictionaryOfAttacks["tackel"],
+                    DictionaryOfAttacks["scratch"], DictionaryOfAttacks["waterGun"]));
+
+
+            DictionaryOfPokemons["pikatchu"] = new Pokemon("Pikatchu", "pikatchu", 200, 200, "electricity", "", 20, 20,
+                5,
+                DictionaryOfAttacks["spark"], DictionaryOfAttacks["thunder"], DictionaryOfAttacks["scratch"],
+                DictionaryOfAttacks["vines"]);
+
+            DictionaryOfPokemons.Add("charmander",
+                new Pokemon("Charmander", "charmander", 225, 225, "fire", "", 5, 20, 10, DictionaryOfAttacks["glow"],
+                    DictionaryOfAttacks["scratch"], DictionaryOfAttacks["flamethrower"],
+                    DictionaryOfAttacks["flamethrower"]));
+
+            DictionaryOfPokemons.Add("evoli", new Pokemon("evoli", "evoli", 150, 150, "normal", "", 20, 5, 10,
+                DictionaryOfAttacks["scratch"], DictionaryOfAttacks["flamethrower"],
+                DictionaryOfAttacks["flamethrower"],
+                DictionaryOfAttacks["flamethrower"]));
+
+            DictionaryOfPokemons.Add("Snivy",
+                new Pokemon("Snivy", "snivy", 150, 150, "plants", "sds", 30, 10, 10,
+                    DictionaryOfAttacks["vines"], DictionaryOfAttacks["tackel"], DictionaryOfAttacks["petalDance"],
+                    DictionaryOfAttacks[""]));
         }
 
-  
+        public static void Serialize()
+        {
+            var OutputJSON = JsonConvert.SerializeObject(DictionaryOfPokemons,
+                Formatting.Indented);
+            File.WriteAllText(
+                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json",
+                OutputJSON + Environment.NewLine);
+
+            OutputJSON = JsonConvert.SerializeObject(DictionaryOfAttacks,
+                Formatting.Indented);
+            File.WriteAllText(
+                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratAttack.json",
+                OutputJSON + Environment.NewLine);
+        }
     }
 }

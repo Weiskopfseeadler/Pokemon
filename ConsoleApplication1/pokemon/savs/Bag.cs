@@ -26,23 +26,23 @@ namespace pokemon.savs
 
         public bool CheckIsAktivePokemonKO()
         {
-            bool checkIsAktivePokemonKO = !(_team[_activePokemon].LivePoints > 0);
+            bool CheckIsAktivePokemonKO = !(_team[_activePokemon].LivePoints > 0);
 
-            return checkIsAktivePokemonKO;
+            return CheckIsAktivePokemonKO;
         }
 
         public bool CheckAreAllPokemonKO()
         {
-            bool death = true;
+            bool Death = true;
             for (int i = 0; i < 6; i++)
             {
                 if (_team[i].LivePoints != 0)
                 {
-                    death = false;
+                    Death = false;
                 }
             }
 
-            return death;
+            return Death;
         }
 
         public void ChoseItem(Pokemon Enemy)
@@ -77,12 +77,12 @@ namespace pokemon.savs
             }
         }
 
-        public void ChangeAttack(int indexPokemon, int indexAttacke, string attackKey)
+        public void ChangeAttack(int IndexPokemon, int IndexAttacke, string attackKey)
         {
-            _team[indexPokemon].PokeAttackList[indexAttacke] = Generate.DictionaryOfAttacks[attackKey];
+            _team[IndexPokemon].PokeAttackList[IndexAttacke] = Generate.DictionaryOfAttacks[attackKey];
         }
 
-        public void CangeAktivePokemon()
+        public void ChangeAktivePokemon()
         {
             int index = 0;
             Console.WriteLine("player turn");

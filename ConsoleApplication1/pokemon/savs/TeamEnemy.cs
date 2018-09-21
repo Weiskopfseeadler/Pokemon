@@ -33,12 +33,12 @@ namespace pokemon.savs
             return death;
         }
 
-        public void ChangeAttack(int indexPokemon, int indexAttacke, string attackKey)
+        public void ChangeAttack(int IndexPokemon, int IndexAttacke, string attackKey)
         {
             throw new System.NotImplementedException();
         }
 
-        public void CangeAktivePokemon()
+        public void ChangeAktivePokemon()
         {
             Console.WriteLine("enemy ChangeshPokemon");
             bool pokemonNotChosen = true;

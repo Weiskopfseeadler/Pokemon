@@ -8,11 +8,13 @@
       <e p="ConsoleApplication1" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Class1.cs" t="Include" />
+        <e p="ClassDiagram1.cd" t="Include" />
         <e p="ConsoleApplication1.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
         <e p="Pokemon" t="Include">
           <e p="Interfaces" t="Include">
+            <e p="GeneratInterface.cs" t="Include" />
             <e p="ItemInterFace.cs" t="Include" />
             <e p="TeamInterface.cs" t="Include" />
           </e>

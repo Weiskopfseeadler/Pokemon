@@ -4,6 +4,7 @@ namespace pokemon.savs
 {
 	public class Typ
 	{
+		//Diese Klasse Gehört nicht zum Projekt(Zukünftige Weiterentwiklung
 		private string name;
 		private List<string> typstrength = new List<string>();
 		private List<string> typweaknes = new List<string>();

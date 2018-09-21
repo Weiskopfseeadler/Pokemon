@@ -9,23 +9,15 @@ namespace poke.methd
 {
     public class MainMenu
     {
+        public static Bag Bag = new Bag();
+        public static TeamEnemy Enemy = new TeamEnemy();
+
         public static void Main(string[] args)
         {
-            // TODO Auto-generated method stub
-
-
-            Bag Bag = new Bag();
-            TeamEnemy Enemy = new TeamEnemy();
-
-         
             Generate.GeneratAttack();
             Generate.GeneratPokemon();
-//            Generate.Serialize();
-           
-           
-
-//          Bag.SetDefault();
-//          Bag.Serialize(Bag);
+//          Generate.Serialize();
+            //Bag.Serialize(Bag);
             Bag.LoadBag();
             bool IsPlaying = true;
             while (IsPlaying)
@@ -34,7 +26,7 @@ namespace poke.methd
                                   "\n2 Kampf gegen Trainer" +
                                   "\n3 Kampf gegen Einzelnes Pokemon" +
                                   "\n4 Shop" +
-                                  "\n9 Quit" );
+                                  "\n9 Quit");
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
                     case 1:
@@ -44,20 +36,20 @@ namespace poke.methd
                         break;
                     case 2:
                         Enemy.RandomEnemy(false);
-                        StartBattel(Enemy, Bag, false);
+                        StartBattel(false);
                         break;
                     case 3:
                         Enemy.RandomEnemy(true);
-                        StartBattel(Enemy, Bag,
-                        true);
+                        StartBattel(true);
                         break;
                     case 4:
                         Console.WriteLine("Was soll gekauft Werden");
                         Bag.ListAllItem();
-                        string ItemToBuy=Console.ReadLine();
+                        string ItemToBuy = Console.ReadLine();
                         Bag.Items[ItemToBuy].ValueOfItem += 1;
                         Bag.Mony -= Bag.Items[ItemToBuy].Price
-                        ;break;
+                            ;
+                        break;
                     case 9:
                         Bag.Serialize(Bag);
                         IsPlaying = false;
@@ -70,7 +62,7 @@ namespace poke.methd
         }
 
 
-        private static void StartBattel(TeamEnemy Enemy, Bag Bag, bool IsSingelPokemon)
+        private static void StartBattel( bool IsSingelPokemon)
         {
             Battle BattleStart = new Battle();
             BattleStart.Enemy = Enemy;

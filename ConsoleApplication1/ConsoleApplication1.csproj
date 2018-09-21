@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="pokemon\Interfaces\GeneratInterface.cs" />
     <Compile Include="pokemon\Interfaces\ItemInterFace.cs" />
     <Compile Include="pokemon\Interfaces\TeamInterface.cs" />
     <Compile Include="pokemon\methd\Battle.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

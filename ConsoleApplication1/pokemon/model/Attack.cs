@@ -45,7 +45,7 @@
 		}
 
 
-		public virtual string Attacktyp
+		public  string Attacktyp
 		{
 			get
 			{
@@ -58,7 +58,7 @@
 		}
 
 
-		public virtual int Damage
+		public  int Damage
 		{
 			get
 			{

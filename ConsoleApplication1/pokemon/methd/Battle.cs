@@ -13,7 +13,7 @@ namespace poke.methd
         private Bag _bag = new Bag();
 
         private bool _isBattelTime;
-        private static bool _isSingelPokemon;
+        private  bool _isSingelPokemon;
 
         public void BattelMenu()
         {
@@ -29,7 +29,7 @@ namespace poke.methd
                         ChosenAttack = ChoseAttack();
                         break;
                     case 2:
-                        Bag.CangeAktivePokemon();
+                        Bag.ChangeAktivePokemon();
                         break;
                     case 3:
                         if (_isSingelPokemon)
@@ -68,7 +68,7 @@ namespace poke.methd
                 }
                 else
                 {
-                    Bag.CangeAktivePokemon();
+                    Bag.ChangeAktivePokemon();
                 }
             }
 
@@ -84,7 +84,7 @@ namespace poke.methd
                 else
                 {
                     Console.WriteLine("Pokemon must be changed");
-                    Enemy.CangeAktivePokemon();
+                    Enemy.ChangeAktivePokemon();
                 }
             }
             else
@@ -101,7 +101,7 @@ namespace poke.methd
                 ChosenAttack -= 1;
                 if (Bag.Team[_bag.ActivePokemon].Initiative >= Enemy.Team[Enemy.ActivePokemon].Initiative)
                 {
-                    Console.WriteLine("Bag Turn");
+                    Console.WriteLine("Player Turn");
                     turnPlayer(ChosenAttack);
                     if (!Enemy.CheckIsAktivePokemonKO())
                     {
