@@ -12,9 +12,11 @@ namespace pokemon.savs
 
     public class Generate
     {
-        private static Dictionary<string, Attack> _dictionaryOfAttacks = new Dictionary<string, Attack>();
+        private  static Dictionary<string, Attack> _dictionaryOfAttacks = new Dictionary<string, Attack>();
         private static Dictionary<string, Pokemon> _dictionaryOfPokemons = new Dictionary<string, Pokemon>();
-     
+        
+
+   
 
         public static void GeneratAttack()
         {
@@ -69,8 +71,9 @@ namespace pokemon.savs
                     _dictionaryOfAttacks[""]));
         }
 
-        public static void Serialize()
+        public  static void Serialize()
         {
+         
             string outputJSON = Newtonsoft.Json.JsonConvert.SerializeObject(Generate._dictionaryOfPokemons,
                 Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(
@@ -84,15 +87,15 @@ namespace pokemon.savs
                 outputJSON + Environment.NewLine);
         }
 
-
-        public static void LoadGeneratorPokemon()
+//Dies Funktion ist leider nicht verfügbar. Aus Zeitlichen Gründen Konte sie nicht Fertigestelt Werden
+/*        public  void LoadPokemon()
         {
             dynamic o1 = JToken.Parse(File.ReadAllText(
                 @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
             var LoadedBag = o1;
 
 
-            _dictionaryOfPokemons.Clear();
+            this._dictionaryOfPokemons.Clear();
 
             foreach (var item in o1)
             {
@@ -108,7 +111,7 @@ namespace pokemon.savs
                 int Strength = item.Value.Strength;
                 int Defence = item.Value.Defence;
 
-                DictionaryOfPokemons.Add(Key, new Pokemon(Name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2,
+                this.DictionaryOfPokemons.Add(Key, new Pokemon(Name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2,
                     Initiative, Strength, Defence, new Attack(), new Attack(), new Attack(), new Attack()));
                 for (int i = 0; i < item.Value.PokeAttackList.Count; i++)
                 {
@@ -116,19 +119,20 @@ namespace pokemon.savs
                     string Attacktyp1 = item.Value.PokeAttackList[i].Attacktyp;
                     int Damage1 = item.Value.PokeAttackList[i].Damage;
                     Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
-                    DictionaryOfPokemons[Key].PokeAttackList[i] = A;
+                    this.DictionaryOfPokemons[Key].PokeAttackList[i] = A;
                 }
             }
-        }
+        }*/
 
-        public static void LoadAttack()
+        //Dies Funktion ist leider nicht verfügbar. Aus Zeitlichen Gründen Konte sie nicht Fertigestelt Werden
+        /*public  void LoadAttack()
         {
             dynamic o1 = JToken.Parse(File.ReadAllText(
                 @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
             var LoadedBag = o1;
 
 
-            _dictionaryOfAttacks.Clear();
+            this._dictionaryOfAttacks.Clear();
 
             foreach (var item in o1)
             {
@@ -139,11 +143,12 @@ namespace pokemon.savs
                     string Attacktyp1 = item.Value.Attacktyp;
                     int Damage1 = item.Value.Damage;
                     Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
-                    _dictionaryOfAttacks.Add(key,A);
+                this._dictionaryOfAttacks.Add(key,A);
                 
 
             }
         }
+*/
 
         public static Dictionary<string, Attack> DictionaryOfAttacks
         {

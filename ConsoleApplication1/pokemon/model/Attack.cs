@@ -25,6 +25,7 @@
 			this._attacktyp = AttackFromNew.Attacktyp;
 			this._damage = AttackFromNew.Damage;
 		}
+		
 
 		public override string ToString()
 		{

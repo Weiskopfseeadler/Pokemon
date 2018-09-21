@@ -17,11 +17,12 @@ namespace poke.methd
             Bag Bag = new Bag();
             TeamEnemy Enemy = new TeamEnemy();
 
-
+         
             Generate.GeneratAttack();
-            Generate.Serialize();
-            Generate.LoadAttack();
-            Generate.LoadGeneratorPokemon();
+            Generate.GeneratPokemon();
+//            Generate.Serialize();
+           
+           
 
 //          Bag.SetDefault();
 //          Bag.Serialize(Bag);

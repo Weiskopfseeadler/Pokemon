@@ -10,6 +10,7 @@ namespace pokemon.savs
         private int _activePokemon;
         private List<Pokemon> _team = new List<Pokemon>();
         public Random Random = new Random();
+        
 
         public bool CheckIsAktivePokemonKO()
         {
@@ -21,7 +22,7 @@ namespace pokemon.savs
         public bool CheckAreAllPokemonKO()
         {
             bool death = true;
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < Team.Count; i++)
             {
                 if (_team[i].LivePoints != 0)
                 {
@@ -39,7 +40,7 @@ namespace pokemon.savs
 
         public void CangeAktivePokemon()
         {
-            Console.WriteLine("enemy ChangescPokemon");
+            Console.WriteLine("enemy ChangeshPokemon");
             bool pokemonNotChosen = true;
             while (pokemonNotChosen)
             {
@@ -62,15 +63,24 @@ namespace pokemon.savs
             {
                 RadomNumber = 0;
             }
-
-            for (int i = 0; i <= RadomNumber; i++)
+            _team.Clear();
+            for (int i = 0; i <= 5; i++)
             {
-                int rand = Random.Next(0, Generate.DictionaryOfPokemons.Count);
-                Console.WriteLine(Generate.DictionaryOfPokemons.Count);
-                Console.WriteLine(rand);
-                _team.Clear();
-                _team.Add(new Pokemon(Generate.DictionaryOfPokemons.ElementAt(rand).Value));
-                Console.WriteLine(_team[i].ToString());
+                if (RadomNumber<6)
+                {
+                    int rand = Random.Next(1, Generate.DictionaryOfPokemons.Count);
+                    Console.WriteLine(Generate.DictionaryOfPokemons.Count);
+                    Console.WriteLine(rand);
+                
+                    _team.Add(new Pokemon(Generate.DictionaryOfPokemons.ElementAt(rand).Value));
+                    Console.WriteLine(_team[i].ToString());
+                }
+                else
+                {
+                 Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));   
+                }
+
+                RadomNumber++;
             }
         }
 

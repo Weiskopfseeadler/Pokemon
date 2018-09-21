@@ -21,6 +21,7 @@ namespace pokemon.savs
         private int _mony;
         private List<Pokemon> _team = new List<Pokemon>();
         private Dictionary<string, Item> _items = new Dictionary<string, Item>();
+        
 
 
         public bool CheckIsAktivePokemonKO()
@@ -113,7 +114,7 @@ namespace pokemon.savs
         public void SetDefault()
         {
             this._activePokemon = 0;
-        
+            
 
             this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["pikatchu"]));
             this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
