@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="pokemon.savs.Bag" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgACAAAICgEAAAAAoAAAADAAACAGEAgEAAgAAAA=</HashCode>
+      <FileName>pokemon\savs\Bag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="pokemon.savs.Generate" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAACAgAAAQQAAAAAAAAAA=</HashCode>
+      <FileName>pokemon\savs\Generate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pokemon.savs.TeamEnemy" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgAAAAAAAAEAAAAAAAAAAAAABCAGEAAAAAgAAAA=</HashCode>
+      <FileName>pokemon\savs\TeamEnemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="poke.methd.Battle" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgJIAAgAAAIAAgAAAAABgAABAAEAAAAAAAUAAAA=</HashCode>
+      <FileName>pokemon\methd\Battle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="poke.methd.MainMenu">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAgAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>pokemon\methd\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="poke.model.Attack" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADAAAAABAAEAAAAAAAABAAAAAABACAAAAAAAAA=</HashCode>
+      <FileName>pokemon\model\Attack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="poke.model.Pokemon" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAASAAAAQQQBAAAEAEAAAAAJAABAAAAAwAQCQgCAQBg=</HashCode>
+      <FileName>pokemon\model\Pokemon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication1.poke.model.Item" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AgAEAAAAAQBAQAAEAAIAAAAAAAAAAABAAEQAgEAAAAQ=</HashCode>
+      <FileName>pokemon\model\Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="pokemon.savs.GeneratInterface">
+    <Position X="1.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAACAgAAAQQAAAAAAAAAA=</HashCode>
+      <FileName>pokemon\Interfaces\GeneratInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="pokemon.savs.TeamInterface" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAACAGAAAAAAAAAAA=</HashCode>
+      <FileName>pokemon\Interfaces\TeamInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleApplication1.pokemon.model.ItemInterFace" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>pokemon\Interfaces\ItemInterFace.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ConsoleApplication1.pokemon.model.FunktionOfItem" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAACAAAACQAAEAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>pokemon\model\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
