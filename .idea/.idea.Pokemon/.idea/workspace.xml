@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="104a45b7-ade1-474f-8bc3-0514f238b6d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pokemon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pokemon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/Generate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs" afterDir="false" />
-    </list>
+    <list default="true" id="104a45b7-ade1-474f-8bc3-0514f238b6d5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +47,14 @@
         <counts>
           <entry key="cs" value="9450" />
           <entry key="json" value="202" />
-          <entry key="txt" value="58" />
+          <entry key="txt" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="C#" value="9450" />
           <entry key="JSON" value="202" />
-          <entry key="PLAIN_TEXT" value="58" />
+          <entry key="PLAIN_TEXT" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -166,7 +162,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
+            <state relative-caret-position="1305">
               <caret line="90" column="27" lean-forward="true" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
               <folding>
                 <marker date="1537521128900" expanded="false" signature="6:84" ph="..." />
@@ -428,7 +424,7 @@
       <workItem from="1537363426959" duration="12351000" />
       <workItem from="1537425338203" duration="12036000" />
       <workItem from="1537462125146" duration="9058000" />
-      <workItem from="1537511515395" duration="8881000" />
+      <workItem from="1537511515395" duration="9241000" />
     </task>
     <task id="LOCAL-00001" summary="Commit vom 17.09.18 23:01">
       <created>1537218105981</created>
@@ -479,11 +475,25 @@
       <option name="project" value="LOCAL" />
       <updated>1537520820422</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit vom 21.09.18 12:01">
+      <created>1537524113852</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1537524113852</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit vom 21.09.18 12:01">
+      <created>1537524262041</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537524262041</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125835000" />
+    <option name="totallyTimeSpent" value="126195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,16 +505,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="753" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="761" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3106796" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15033557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.32072368" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3455414" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32961783" />
@@ -566,7 +576,8 @@
     <MESSAGE value="Commit vom 20.09.18 12:03" />
     <MESSAGE value="Commit vom 21.09.18 09:11" />
     <MESSAGE value="Commit vom 21.09.18 11:06" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit vom 21.09.18 11:06" />
+    <MESSAGE value="Commit vom 21.09.18 12:01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit vom 21.09.18 12:01" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -960,7 +971,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ConsoleApplication1/pokemon/savs/TeamEnemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="1305">
           <caret line="90" column="27" lean-forward="true" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
           <folding>
             <marker date="1537521128900" expanded="false" signature="6:84" ph="..." />
