@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.AccessControl;
+using ConsoleApplication1.pokemon.savs;
 using pokemon.savs;
 
 namespace poke.methd
@@ -17,7 +18,7 @@ namespace poke.methd
             Generate.GeneratAttack();
             Generate.GeneratPokemon();
 //          Generate.Serialize();
-            //Bag.Serialize(Bag);
+            //BagInterface.Serialize(BagInterface);
             Bag.LoadBag();
             bool IsPlaying = true;
             while (IsPlaying)

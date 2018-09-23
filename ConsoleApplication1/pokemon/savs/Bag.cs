@@ -3,44 +3,39 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ConsoleApplication1.poke.model;
-using Newtonsoft.Json.Linq;
-using poke.model;
-using System.Runtime.InteropServices.ComTypes;
+using ConsoleApplication1.pokemon.Interfaces;
 using ConsoleApplication1.pokemon.model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using poke.model;
-using Microsoft.CSharp;
+using pokemon.savs;
 
-
-namespace pokemon.savs
+namespace ConsoleApplication1.pokemon.savs
 {
-    public class Bag : TeamInterface
+    public class Bag : BagInterface
     {
-        private int _activePokemon;
-        private int _mony;
-        private List<Pokemon> _team = new List<Pokemon>();
-        private Dictionary<string, Item> _items = new Dictionary<string, Item>();
-        
+       private int _Mony;
+
+       private int _ActivePokemon; 
+
+       private List<Pokemon> _Team = new List<Pokemon>();
+
+       private Dictionary<string, Item> _Items  = new Dictionary<string, Item>();
 
 
         public bool CheckIsAktivePokemonKO()
         {
-            bool CheckIsAktivePokemonKO = !(_team[_activePokemon].LivePoints > 0);
+            var CheckIsAktivePokemonKo = !(Team[ActivePokemon].LivePoints > 0);
 
-            return CheckIsAktivePokemonKO;
+            return CheckIsAktivePokemonKo;
         }
 
         public bool CheckAreAllPokemonKO()
         {
-            bool Death = true;
-            for (int i = 0; i < 6; i++)
-            {
-                if (_team[i].LivePoints != 0)
-                {
+            var Death = true;
+            for (var I = 0; I < 6; I++)
+                if (Team[I].LivePoints != 0)
                     Death = false;
-                }
-            }
 
             return Death;
         }
@@ -49,102 +44,77 @@ namespace pokemon.savs
         {
             ListAllItem();
 
-            string ChosenItem = Console.ReadLine();
+            var ChosenItem = Console.ReadLine();
             ListAllPokemon();
-            int ChosenPokemon = Convert.ToInt32(Console.ReadLine());
-            if (Enemy == null)
-            {
-                this._items[ChosenItem].ActivateEffectOfItem(this, ChosenPokemon,Enemy);
-            }
-            this._items[ChosenItem].ActivateEffectOfItem(this, ChosenPokemon, Enemy);
-            Console.WriteLine(this._team[ChosenPokemon]);
+            var ChosenPokemon = Convert.ToInt32(Console.ReadLine());
+            
+            Items[ChosenItem].ActivateEffectOfItem(this, ChosenPokemon, Enemy);
+            Console.WriteLine(Team[ChosenPokemon]);
         }
 
         public void ListAllItem()
         {
             Console.WriteLine("Item");
-            for (int i = 0; i < this._items.Count; i++)
-            {
-                Console.WriteLine(this._items.ElementAt(i).Value.ToString());
-            }
+            for (var I = 0; I < Items.Count; I++) Console.WriteLine(Items.ElementAt(I).Value.ToString());
         }
 
         public void ListAllPokemon()
         {
-            for (int i = 0; i < this._team.Count; i++)
-            {
-                Console.WriteLine(i + " " + this._team[i].ToStringWithOutAttacks());
-            }
+            for (var I = 0; I < Team.Count; I++) Console.WriteLine(I + " " + Team[I].ToStringWithOutAttacks());
         }
 
-        public void ChangeAttack(int IndexPokemon, int IndexAttacke, string attackKey)
+        public void ChangeAttack(int IndexPokemon, int IndexAttacke, string AttackKey)
         {
-            _team[IndexPokemon].PokeAttackList[IndexAttacke] = Generate.DictionaryOfAttacks[attackKey];
+            Team[IndexPokemon].PokeAttackList[IndexAttacke] = Generate.DictionaryOfAttacks[AttackKey];
         }
 
         public void ChangeAktivePokemon()
         {
-            int index = 0;
+            var Index = 0;
             Console.WriteLine("player turn");
 
 
-            bool pokemonNotChosen = true;
-            while (pokemonNotChosen)
+            var PokemonNotChosen = true;
+            while (PokemonNotChosen)
             {
                 Console.Write("Enter Integer 1-6:");
                 Console.WriteLine("");
 
-                for (int y = 0; y < 6; y++)
+                for (var y = 0; y < 6; y++)
+                    if (Team[y].LivePoints > 0)
+                        Console.WriteLine("Nummer " + (y + 1) + "   " + Team[y].ToStringWithOutAttacks());
+                Index = Convert.ToInt32(Console.ReadLine());
+                if (Index > 0 && Index <= 6)
                 {
-                    if (_team[y].LivePoints > 0)
-                    {
-                        Console.WriteLine("Nummer " + (y + 1) + "   " + _team[y].ToStringWithOutAttacks());
-                    }
-                }
-                index = Convert.ToInt32(Console.ReadLine());
-                if (index > 0 && index <= 6)
-                {
-                    pokemonNotChosen = false;
-                    index -= 1;
-                    _activePokemon = index;
+                    PokemonNotChosen = false;
+                    Index -= 1;
+                    ActivePokemon = Index;
                 }
             }
         }
 
-        public void SetDefault()
-        {
-            this._activePokemon = 0;
-            
-
-            this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["pikatchu"]));
-            this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-            this._team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
-        }
-        
         public void Serialize(Bag Bag)
         {
-            string outputJSON =Newtonsoft.Json.JsonConvert.SerializeObject(Bag, Newtonsoft.Json.Formatting.Indented);
+            var OutputJson = JsonConvert.SerializeObject(Bag, Formatting.Indented) ?? throw new ArgumentNullException("Bag");
             File.WriteAllText(
                 @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\BagSave.json",
-                outputJSON + Environment.NewLine);
+                OutputJson + Environment.NewLine);
         }
 
         public void LoadBag()
         {
-            dynamic o1 = JToken.Parse(File.ReadAllText(
-            @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\BagSave.json"));
-            var LoadedBag = o1;
+            dynamic ReadFile = JToken.Parse(File.ReadAllText(
+                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\BagSave.json"));
+            var LoadedBag = ReadFile;
 
             foreach (var Item in LoadedBag)
             {
                 Console.WriteLine(Item.Name);
                 switch (Item.Name)
                 {
-                    case "Money": 
-                        Mony= Item.Value;break;
+                    case "Money":
+                        Mony = Item.Value;
+                        break;
                     case "Items":
                         Items.Clear();
                         foreach (var Item2 in Item.Value)
@@ -154,8 +124,10 @@ namespace pokemon.savs
                             int ValueeOfEffekt = Item2.Value.ValueOfEffekt;
                             int ValueOfItem = Item2.Value.ValueOfItem;
                             int Price = Item2.Value.Price;
-                            Items.Add(Item2.Name, new Item(ItemName, FunktionOfItem, ValueeOfEffekt, ValueOfItem,Price));
+                            Items.Add(Item2.Name,
+                                new Item(ItemName, FunktionOfItem, ValueeOfEffekt, ValueOfItem, Price));
                         }
+
                         ;
                         break;
                     case "ActivePokemon":
@@ -170,61 +142,70 @@ namespace pokemon.savs
             }
         }
 
-        private void LoadTeam(dynamic item)
+        public void LoadTeam(dynamic Item)
         {
-            int counter = 0;
+            var Counter = 0;
             Team.Clear();
-            foreach (var item2 in item.Value)
+            foreach (var Item2 in Item.Value)
             {
-                string name = item2.PokemonName;
-                string PokemonArt = item2.PokemonArt;
-                int LivePoints = item2.LivePoints;
-                int MaxLivePoints = item2.MaxLivePoints;
-                string Typ1 = item2.Typ1;
-                string Typ2 = item2.Typ2;
-                int Initiative = item2.Initiative;
-                int Strength = item2.Strength;
-                int Defence = item2.Defence;
-                
-                Team.Add(new Pokemon(name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2, Initiative,
+                string Name = Item2.PokemonName;
+                string PokemonArt = Item2.PokemonArt;
+                int LivePoints = Item2.LivePoints;
+                int MaxLivePoints = Item2.MaxLivePoints;
+                string Typ1 = Item2.Typ1;
+                string Typ2 = Item2.Typ2;
+                int Initiative = Item2.Initiative;
+                int Strength = Item2.Strength;
+                int Defence = Item2.Defence;
+
+                Team.Add(new Pokemon(Name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2, Initiative,
                     Strength, Defence, new Attack(), new Attack(), new Attack(), new Attack()));
-                for (int i = 0; i < item2.PokeAttackList.Count; i++)
+                for (var i = 0; i < Item2.PokeAttackList.Count; i++)
                 {
-                    string AttackName1 = item2.PokeAttackList[i].AttackName;
-                    string Attacktyp1 = item2.PokeAttackList[i].Attacktyp;
-                    int Damage1 = item2.PokeAttackList[i].Damage;
-                    Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
-                    Team[counter].PokeAttackList[i] = A;
+                    string AttackName1 = Item2.PokeAttackList[i].AttackName;
+                    string Attacktyp1 = Item2.PokeAttackList[i].Attacktyp;
+                    int Damage1 = Item2.PokeAttackList[i].Damage;
+                    var A = new Attack(AttackName1, Attacktyp1, Damage1);
+                    Team[Counter].PokeAttackList[i] = A;
                 }
 
-                counter++;
+                Counter++;
             }
+        }
+
+        public void SetDefault()
+        {
+            ActivePokemon = 0;
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["pikatchu"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
+            Team.Add(new Pokemon(Generate.DictionaryOfPokemons["empty"]));
         }
 
         public int Mony
         {
-            get => _mony;
-            set => _mony = value;
+            get => _Mony;
+            set => _Mony = value;
         }
 
         public int ActivePokemon
         {
-            get => _activePokemon;
-            set => _activePokemon = value;
+            get => _ActivePokemon;
+            set => _ActivePokemon = value;
         }
 
         public List<Pokemon> Team
         {
-            get => _team;
-            set => _team = value;
+            get => _Team;
+            set => _Team = value;
         }
 
         public Dictionary<string, Item> Items
         {
-            get => _items;
-            set => _items = value;
+            get => _Items;
+            set => _Items = value;
         }
-
-        
     }
 }

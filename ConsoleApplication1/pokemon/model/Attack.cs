@@ -3,44 +3,44 @@
 	public class Attack
 	{
 
-		private string _attackName;
-		private string _attacktyp;
-		private int _damage;
+		private string _AttackName;
+		private string _Attacktyp;
+		private int _Damage;
 
 		public Attack()
 		{
 
 		}
 
-		public Attack(string attackName, string attacktyp, int damage) : base()
+		public Attack(string AttackName, string Attacktyp, int Damage) : base()
 		{
-			this._attackName = attackName;
-			this._attacktyp = attacktyp;
-			this._damage = damage;
+			this._AttackName = AttackName;
+			this._Attacktyp = Attacktyp;
+			this._Damage = Damage;
 		}
 
 		public Attack(Attack AttackFromNew)
 		{
-			this._attackName = AttackFromNew.AttackName;
-			this._attacktyp = AttackFromNew.Attacktyp;
-			this._damage = AttackFromNew.Damage;
+			this._AttackName = AttackFromNew.AttackName;
+			this._Attacktyp = AttackFromNew.Attacktyp;
+			this._Damage = AttackFromNew.Damage;
 		}
 		
 
 		public override string ToString()
 		{
-			return _attackName + "  " + _attacktyp + "  " + _damage;
+			return _AttackName + "  " + _Attacktyp + "  " + _Damage;
 		}
 
 		public virtual string AttackName
 		{
 			get
 			{
-				return _attackName;
+				return _AttackName;
 			}
 			set
 			{
-				this._attackName = value;
+				this._AttackName = value;
 			}
 		}
 
@@ -49,11 +49,11 @@
 		{
 			get
 			{
-				return _attacktyp;
+				return _Attacktyp;
 			}
 			set
 			{
-				this._attacktyp = value;
+				this._Attacktyp = value;
 			}
 		}
 
@@ -62,11 +62,11 @@
 		{
 			get
 			{
-				return _damage;
+				return _Damage;
 			}
 			set
 			{
-				this._damage = value;
+				this._Damage = value;
 			}
 		}
 

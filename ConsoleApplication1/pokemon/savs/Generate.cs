@@ -6,74 +6,11 @@ using poke.model;
 
 namespace pokemon.savs
 {
-    public class Generate
+    public class Generate 
     {
-//Dies Funktion ist leider nicht verfügbar. Aus Zeitlichen Gründen Konte sie nicht Fertigestelt Werden
-/*        public  void LoadPokemon()
-        {
-            dynamic o1 = JToken.Parse(File.ReadAllText(
-                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
-            var LoadedBag = o1;
+        public static Dictionary<string, Attack> DictionaryOfAttacks  = new Dictionary<string, Attack>();
 
-
-            this._dictionaryOfPokemons.Clear();
-
-            foreach (var item in o1)
-            {
-                Console.WriteLine("______________");
-                string Key = item.Name;
-                string Name = item.Value.PokemonName;
-                string PokemonArt = item.Value.PokemonArt;
-                int LivePoints = item.Value.LivePoints;
-                int MaxLivePoints = item.Value.MaxLivePoints;
-                string Typ1 = item.Value.Typ1;
-                string Typ2 = item.Value.Typ2;
-                int Initiative = item.Value.Initiative;
-                int Strength = item.Value.Strength;
-                int Defence = item.Value.Defence;
-
-                this.DictionaryOfPokemons.Add(Key, new Pokemon(Name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2,
-                    Initiative, Strength, Defence, new Attack(), new Attack(), new Attack(), new Attack()));
-                for (int i = 0; i < item.Value.PokeAttackList.Count; i++)
-                {
-                    string AttackName1 = item.Value.Poke92AttackList[i].AttackName;
-                    string Attacktyp1 = item.Value.PokeAttackList[i].Attacktyp;
-                    int Damage1 = item.Value.PokeAttackList[i].Damage;
-                    Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
-                    this.DictionaryOfPokemons[Key].PokeAttackList[i] = A;
-                }
-            }
-        }*/
-
-        //Dies Funktion ist leider nicht verfügbar. Aus Zeitlichen Gründen Konte sie nicht Fertigestelt Werden
-        /*public  void LoadAttack()
-        {
-            dynamic o1 = JToken.Parse(File.ReadAllText(
-                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
-            var LoadedBag = o1;
-
-
-            this._dictionaryOfAttacks.Clear();
-
-            foreach (var item in o1)
-            {
-             
-
-                    string key = item.Name;
-                    string AttackName1 = item.Value.AttackName;
-                    string Attacktyp1 = item.Value.Attacktyp;
-                    int Damage1 = item.Value.Damage;
-                    Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
-                this._dictionaryOfAttacks.Add(key,A);
-                
-
-            }
-        }
-*/
-
-        public static Dictionary<string, Attack> DictionaryOfAttacks { get; set; } = new Dictionary<string, Attack>();
-
-        public static Dictionary<string, Pokemon> DictionaryOfPokemons { get; set; } =new Dictionary<string, Pokemon>();
+        public static Dictionary<string, Pokemon> DictionaryOfPokemons  =new Dictionary<string, Pokemon>();
 
 
         public static void GeneratAttack()
@@ -143,6 +80,80 @@ namespace pokemon.savs
             File.WriteAllText(
                 @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratAttack.json",
                 OutputJSON + Environment.NewLine);
+        }
+        
+//Dies Funktion ist leider nicht verfügbar. Aus Zeitlichen Gründen Konte sie nicht Fertigestelt Werden
+/*        public  void LoadPokemon()
+        {
+            dynamic o1 = JToken.Parse(File.ReadAllText(
+                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
+            var LoadedBag = o1;
+
+
+            this._dictionaryOfPokemons.Clear();
+
+            foreach (var item in o1)
+            {
+                Console.WriteLine("______________");
+                string Key = item.Name;
+                string Name = item.Value.PokemonName;
+                string PokemonArt = item.Value.PokemonArt;
+                int LivePoints = item.Value.LivePoints;
+                int MaxLivePoints = item.Value.MaxLivePoints;
+                string Typ1 = item.Value.Typ1;
+                string Typ2 = item.Value.Typ2;
+                int Initiative = item.Value.Initiative;
+                int Strength = item.Value.Strength;
+                int Defence = item.Value.Defence;
+
+                this.DictionaryOfPokemons.Add(Key, new Pokemon(Name, PokemonArt, LivePoints, MaxLivePoints, Typ1, Typ2,
+                    Initiative, Strength, Defence, new Attack(), new Attack(), new Attack(), new Attack()));
+                for (int i = 0; i < item.Value.PokeAttackList.Count; i++)
+                {
+                    string AttackName1 = item.Value.Poke92AttackList[i].AttackName;
+                    string Attacktyp1 = item.Value.PokeAttackList[i].Attacktyp;
+                    int Damage1 = item.Value.PokeAttackList[i].Damage;
+                    Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
+                    this.DictionaryOfPokemons[Key].PokeAttackList[i] = A;
+                }
+            }
+        }*/
+
+        //Dies Funktion ist leider nicht verfügbar. Aus Zeitlichen Gründen Konte sie nicht Fertigestelt Werden
+        /*public  void LoadAttack()
+        {
+            dynamic o1 = JToken.Parse(File.ReadAllText(
+                @"C:\Users\vmadmin\RiderProjects\Pokemon\ConsoleApplication1\pokemon\SaveFiles\GeneratorPokemon.json"));
+            var LoadedBag = o1;
+
+
+            this._dictionaryOfAttacks.Clear();
+
+            foreach (var item in o1)
+            {
+             
+
+                    string key = item.Name;
+                    string AttackName1 = item.Value.AttackName;
+                    string Attacktyp1 = item.Value.Attacktyp;
+                    int Damage1 = item.Value.Damage;
+                    Attack A = new Attack(AttackName1, Attacktyp1, Damage1);
+                this._dictionaryOfAttacks.Add(key,A);
+                
+
+            }
+        }
+*/
+        public static Dictionary<string, Attack> DictionaryOfAttacks1
+        {
+            get => DictionaryOfAttacks;
+            set => DictionaryOfAttacks = value;
+        }
+
+        public static Dictionary<string, Pokemon> DictionaryOfPokemons1
+        {
+            get => DictionaryOfPokemons;
+            set => DictionaryOfPokemons = value;
         }
     }
 }

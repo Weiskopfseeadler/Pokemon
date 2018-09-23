@@ -1,13 +1,12 @@
 ﻿using System;
-using System.CodeDom.Compiler;
-using System.Linq;
-using ConsoleApplication1.poke.model;
+using ConsoleApplication1.pokemon.Interfaces;
 using poke.model;
 using pokemon.savs;
+using Bag = ConsoleApplication1.pokemon.savs.Bag;
 
 namespace poke.methd
 {
-    public class Battle
+    public class Battle:BattelInterface
     {
         private TeamEnemy _enemy = new TeamEnemy();
         private Bag _bag = new Bag();
@@ -17,8 +16,8 @@ namespace poke.methd
 
         public void BattelMenu()
         {
-            _isBattelTime = true;
-            while (_isBattelTime)
+            IsBattelTime = true;
+            while (IsBattelTime )
             {
                 int ChosenAttack = 0;
                 Console.WriteLine(" Battle \n Pokemon \n Items");
@@ -32,7 +31,7 @@ namespace poke.methd
                         Bag.ChangeAktivePokemon();
                         break;
                     case 3:
-                        if (_isSingelPokemon)
+                        if (IsSingelPokemon)
                         {
                             Bag.ChoseItem(Enemy.Team[0]);
                         }
@@ -53,9 +52,9 @@ namespace poke.methd
             Bag.Mony = Rand.Next(mingain, maxgain);
         }
 
-        private void CheckStatus()
+        public void CheckStatus()
         {
-            Console.WriteLine("Test Status of Bag Pokemon");
+            Console.WriteLine("Test Status of BagInterface Pokemon");
 
             if (Bag.CheckIsAktivePokemonKO())
             {
@@ -94,7 +93,7 @@ namespace poke.methd
         }
 
 
-        private void BattlePhase(int ChosenAttack)
+        public void BattlePhase(int ChosenAttack)
         {
             if (!(ChosenAttack == 0))
             {
@@ -115,7 +114,7 @@ namespace poke.methd
                     turnEnemy();
                     if (!Bag.CheckIsAktivePokemonKO())
                     {
-                        Console.WriteLine("Bag Turn");
+                        Console.WriteLine("BagInterface Turn");
                         turnPlayer(ChosenAttack);
                     }
                 }
@@ -127,7 +126,7 @@ namespace poke.methd
         }
 
 
-        private int ChoseAttack()
+        public int ChoseAttack()
         {
             int index = 0;
             Console.WriteLine("player turn");
@@ -149,7 +148,7 @@ namespace poke.methd
         }
 
 
-        private void turnPlayer(int ChosenAttack)
+        public void turnPlayer(int ChosenAttack)
         {
             Console.WriteLine("______Player_________");
 
@@ -162,7 +161,7 @@ namespace poke.methd
         }
 
 
-        private void turnEnemy()
+        public void turnEnemy()
         {
             Console.WriteLine("______Enemy_________");
             Random random = new Random();
@@ -180,7 +179,7 @@ namespace poke.methd
         }
 
 
-        private void DamageCalculation(Pokemon Attacking, Attack Attack, Pokemon Defending)
+        public void DamageCalculation(Pokemon Attacking, Attack Attack, Pokemon Defending)
         {
             Console.WriteLine("________StartCalculation_______");
             double BonusDamage;

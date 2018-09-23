@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using ConsoleApplication1.pokemon.model;
+using ConsoleApplication1.pokemon.savs;
 using poke.model;
 using pokemon.savs;
 
@@ -8,44 +9,44 @@ namespace ConsoleApplication1.poke.model
 {
     public class Item : ItemInterFace
     {
-        private string _itemName;
-        private FunktionOfItem _funktionOfItem;
-        private int _valueOfEffekt;
-        private int _valueOfItem;
-        private int _price;
+        private string _ItemName;
+        private FunktionOfItem _FunktionOfItem;
+        private int _ValueOfEffekt;
+        private int _ValueOfItem;
+        private int _Price;
 
-        public Item(string itemName, FunktionOfItem funktionOfItem, int valueOfEffekt, int valueOfItem, int price)
+        public Item(string ItemName, FunktionOfItem FunktionOfItem, int ValueOfEffekt, int ValueOfItem, int Price)
         {
-            _itemName = itemName;
-            _funktionOfItem = funktionOfItem;
-            _valueOfEffekt = valueOfEffekt;
-            _valueOfItem = valueOfItem;
-            _price = price;
+            _ItemName = ItemName;
+            _FunktionOfItem = FunktionOfItem;
+            _ValueOfEffekt = ValueOfEffekt;
+            _ValueOfItem = ValueOfItem;
+            _Price = Price;
         }
 
         public void ActivateEffectOfItem(Bag Bag, int SelectetPokemon, Pokemon WildPokemon )
         {
-            if (_valueOfItem > 0)
+            if (_ValueOfItem > 0)
             {
-                switch (_funktionOfItem)
+                switch (_FunktionOfItem)
                 {
                     case FunktionOfItem.Heal:
-                        Bag.Team[SelectetPokemon].LivePoints += _valueOfEffekt;
+                        Bag.Team[SelectetPokemon].LivePoints += _ValueOfEffekt;
                         break;
                     case FunktionOfItem.MoreDefense:
-                        Bag.Team[SelectetPokemon].Defence += _valueOfEffekt;
+                        Bag.Team[SelectetPokemon].Defence += _ValueOfEffekt;
                         break;
                     case FunktionOfItem.MoreInitiative:
-                        Bag.Team[SelectetPokemon].Initiative += _valueOfEffekt;
+                        Bag.Team[SelectetPokemon].Initiative += _ValueOfEffekt;
                         ;
                         break;
                     case FunktionOfItem.MoreStrenth:
-                        Bag.Team[SelectetPokemon].Strength += _valueOfEffekt;
+                        Bag.Team[SelectetPokemon].Strength += _ValueOfEffekt;
                         ;
                         break;
                     case FunktionOfItem.MoreHealth:
-                        Bag.Team[SelectetPokemon].MaxLivePoints += _valueOfEffekt;
-                        Bag.Team[SelectetPokemon].LivePoints += _valueOfEffekt;
+                        Bag.Team[SelectetPokemon].MaxLivePoints += _ValueOfEffekt;
+                        Bag.Team[SelectetPokemon].LivePoints += _ValueOfEffekt;
                         break;
                     case FunktionOfItem.Pokeball:
                         Catch(Bag, WildPokemon);
@@ -56,7 +57,7 @@ namespace ConsoleApplication1.poke.model
 
 
 
-                _valueOfItem -= 1;
+                _ValueOfItem -= 1;
             }
             
         }
@@ -65,11 +66,11 @@ namespace ConsoleApplication1.poke.model
         {
             if (WildPokemon != null)
             {
-                Random rand = new Random();
+                Random Rand = new Random();
                 Console.WriteLine("Use pokeball");
 
-                int RandomNumberGenerator = rand.Next(0, WildPokemon.LivePoints);
-                if (RandomNumberGenerator < ((WildPokemon.MaxLivePoints / 20)) * _valueOfEffekt)
+                int RandomNumberGenerator = Rand.Next(0, WildPokemon.LivePoints);
+                if (RandomNumberGenerator < ((WildPokemon.MaxLivePoints / 20)) * _ValueOfEffekt)
                 {
                     Console.WriteLine("captured");
                     Bag.ListAllPokemon();
@@ -98,31 +99,31 @@ namespace ConsoleApplication1.poke.model
 
         public string ItemName
         {
-            get => _itemName;
-            set => _itemName = value;
+            get => _ItemName;
+            set => _ItemName = value;
         }
 
         public FunktionOfItem FunktionOfItem
         {
-            get => _funktionOfItem;
-            set => _funktionOfItem = value;
+            get => _FunktionOfItem;
+            set => _FunktionOfItem = value;
         }
 
         public int ValueOfEffekt
         {
-            get => _valueOfEffekt;
+            get => _ValueOfEffekt;
         }
 
         public int ValueOfItem
         {
-            get => _valueOfItem;
-            set => _valueOfItem = value;
+            get => _ValueOfItem;
+            set => _ValueOfItem = value;
         }
 
         public int Price
         {
-            get => _price;
-            set => _price = value;
+            get => _Price;
+            set => _Price = value;
         }
     }
 }

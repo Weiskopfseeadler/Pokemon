@@ -14,7 +14,8 @@
         <e p="packages.config" t="Include" />
         <e p="Pokemon" t="Include">
           <e p="Interfaces" t="Include">
-            <e p="GeneratInterface.cs" t="Include" />
+            <e p="BagInterface.cs" t="Include" />
+            <e p="BattelInterface.cs" t="Include" />
             <e p="ItemInterFace.cs" t="Include" />
             <e p="TeamInterface.cs" t="Include" />
           </e>

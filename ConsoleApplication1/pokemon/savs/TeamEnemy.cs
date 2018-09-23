@@ -7,14 +7,14 @@ namespace pokemon.savs
 {
     public class TeamEnemy : TeamInterface
     {
-        private int _activePokemon;
-        private List<Pokemon> _team = new List<Pokemon>();
+        private int _ActivePokemon;
+        private List<Pokemon> _Team = new List<Pokemon>();
         private Random Random = new Random();
         
 
         public bool CheckIsAktivePokemonKO()
         {
-            bool checkIsAktivePokemonKO = !(_team[_activePokemon].LivePoints > 0);
+            bool checkIsAktivePokemonKO = !(_Team[_ActivePokemon].LivePoints > 0);
 
             return checkIsAktivePokemonKO;
         }
@@ -24,7 +24,7 @@ namespace pokemon.savs
             bool death = true;
             for (int i = 0; i < Team.Count; i++)
             {
-                if (_team[i].LivePoints != 0)
+                if (_Team[i].LivePoints != 0)
                 {
                     death = false;
                 }
@@ -33,7 +33,7 @@ namespace pokemon.savs
             return death;
         }
 
-        public void ChangeAttack(int IndexPokemon, int IndexAttacke, string attackKey)
+        public void ChangeAttack(int IndexPokemon, int IndexAttacke, string AttackKey)
         {
             throw new System.NotImplementedException();
         }
@@ -41,15 +41,15 @@ namespace pokemon.savs
         public void ChangeAktivePokemon()
         {
             Console.WriteLine("enemy ChangeshPokemon");
-            bool pokemonNotChosen = true;
-            while (pokemonNotChosen)
+            bool PokemonNotChosen = true;
+            while (PokemonNotChosen)
             {
-                int randomNumber = Random.Next(0, 5);
+                int RandomNumber = Random.Next(0, 5);
 
-                if (_team[randomNumber].LivePoints != 0)
+                if (_Team[RandomNumber].LivePoints != 0)
                 {
-                    pokemonNotChosen = false;
-                    _activePokemon = randomNumber;
+                    PokemonNotChosen = false;
+                    _ActivePokemon = RandomNumber;
                 }
             }
         }
@@ -63,17 +63,17 @@ namespace pokemon.savs
             {
                 RadomNumber = 0;
             }
-            _team.Clear();
+            _Team.Clear();
             for (int i = 0; i <= 5; i++)
             {
                 if (RadomNumber<6)
                 {
-                    int rand = Random.Next(1, Generate.DictionaryOfPokemons.Count);
+                    int Rand = Random.Next(1, Generate.DictionaryOfPokemons.Count);
                     Console.WriteLine(Generate.DictionaryOfPokemons.Count);
-                    Console.WriteLine(rand);
+                    Console.WriteLine(Rand);
                 
-                    _team.Add(new Pokemon(Generate.DictionaryOfPokemons.ElementAt(rand).Value));
-                    Console.WriteLine(_team[i].ToString());
+                    _Team.Add(new Pokemon(Generate.DictionaryOfPokemons.ElementAt(Rand).Value));
+                    Console.WriteLine(_Team[i].ToString());
                 }
                 else
                 {
@@ -87,14 +87,14 @@ namespace pokemon.savs
 
         public int ActivePokemon
         {
-            get => _activePokemon;
-            set => _activePokemon = value;
+            get => _ActivePokemon;
+            set => _ActivePokemon = value;
         }
 
         public List<Pokemon> Team
         {
-            get => _team;
-            set => _team = value;
+            get => _Team;
+            set => _Team = value;
         }
     }
 }
